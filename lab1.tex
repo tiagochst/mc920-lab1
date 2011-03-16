@@ -1,0 +1,84 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+
+
+\usepackage{ae,aecompl}
+\usepackage{pslatex}
+\usepackage{epsfig}
+\usepackage{geometry}
+\usepackage{url}
+\usepackage{textcomp}
+\usepackage{ae}
+\usepackage{subfig}
+\usepackage{indentfirst}
+\usepackage{textcomp}
+\usepackage{color}
+\usepackage{setspace}
+\usepackage{verbatim}
+
+
+\linespread{1.5}
+\geometry{ 
+	a4paper,	% Formato do papel
+	tmargin=30mm,	% Margem superior
+	bmargin=20mm,	% Margem inferior
+	lmargin=20mm,	% Margem esquerda
+	rmargin=20mm,	% Margem direita
+	footskip=20mm	% Espaço entre o rodapé e o fim do texto
+}
+\include{abaco} 
+\renewcommand{\thetable}{\Roman{table}}
+\newcommand{\x} {$\bullet$}
+
+
+\begin{document}
+% CAPA
+\begin{titlepage}
+\thispagestyle{empty}
+  \begin{center} {\large \textbf{UNIVERSIDADE~ESTADUAL~DE~CAMPINAS}} \end{center}
+  \begin{center} {\large INSTITUTO~DE~COMPUTAÇÃO}                    \end{center}
+  \vspace{0.1cm}
+  \begin{center}
+  \begin{minipage}[tl]{31mm}
+    \ABACO{1}{9}{6}{9}{1}
+  \end{minipage}
+  \end{center}
+  \vspace{0.3cm}
+  \begin{center} 
+    {\large \textsc{São totalmente válidas algumas das considerações sobre a
+Correlação de Pearson presentes na literatura?  }} 
+    \\\vspace{0.5cm}
+    {\textsl{Relatório do primeiro laboratório de MC920}}
+    \\\vspace{1cm}
+    \begin{tabular}{rl}
+	  \textbf{Aluno}:   Carlos~Eduardo~Machado &  
+	  \textbf{RA}:         \\
+	  \textbf{Aluno}:        Tiago~Chedraoui~Silva & 
+	  \textbf{RA}:        082941 \\
+	\end{tabular}
+  \end{center}
+  \vspace{0.5cm}
+
+  \begin{abstract}
+
+  \end{abstract}
+  % Sumário
+  \tableofcontents
+\end{titlepage} 
+
+\vspace{2mm}
+\newpage
+\section{Conclusão}
+
+% ******************************************************
+% 		REFERENCIAS BIBLIOGRÁFICAS
+% ******************************************************
+%\section{Referências}
+\bibliographystyle{plain}
+\begin{small}
+  \bibliography{referencias}
+\end{small}
+
+\end{document}
