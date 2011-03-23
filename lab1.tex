@@ -79,15 +79,38 @@ Ineffectiveness of the Correlation Coefficient for Image Comparisons''.
 \newpage
 
 \section{Introdução}
-
+O coeficiente de correlação de Pearson é amplamente amplamente
+utilizado na análise estatística, reconhecimento de padrões e
+processamento de imagens.
+Na área de processamento de imagens ele é utilizado na comparação de
+duas imagens para fins de registro de imagens, reconhecimento de
+objetos, e medição disparidade. Para imagens digitais monocromáticas, a correlação de Pearson é definido como :
 
 \begin{equation*}r = \frac{  
-\displaystyle{\sum_{i=1}^n (x_i-\bar{x})(y_i-  
+\displaystyle{\sum_{i} (x_i-\bar{x})(y_i-  
 \bar{y})}}{\displaystyle{\left[  
-\sum_{i=1}^n(x_i-\bar{x})^2  
-\sum_{i=1}^n(y_i-\bar{y})^2\right]^{1/2}}}  
+\sum_{i}(x_i-\bar{x})^2  
+\sum_{i}(y_i-\bar{y})^2\right]^{1/2}}}  
 \end{equation*}  
+
+Onde $x_i$ é a intensidade dos pixels na imagem 1, $y_i$ é a
+intensidade dos pixels na imagem 2,$\bar{x}$ é a intensidade média da
+imagem 1 e $\bar{y}$ é a intensidade média da imagem 2.
+
+O coeficiente tem valor $r=1$ se as duas imagens são absolutamente
+idênticas, $r=0$ se são totalmente não correlacionadas e $r=-1$ se elas
+são totalmente anti-correlacionadas, por exemplo se uma imagem é o
+negativo da outra.
+
+O coeficiente de Pearson pode ser utilizado em
+aplicações de segurança, como, por exemplo, vigilância. Normalmente, 
+o coeficiente de relação é usado para comparar duas imagens do mesmo
+objeto ou cena tiradas em diversas vezes.
+
 \section{Métodos}
+
+
+
 \subsection{Código}
 
 \section{Resultados}
