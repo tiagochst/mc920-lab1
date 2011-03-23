@@ -17,6 +17,8 @@
 \usepackage{color}
 \usepackage{setspace}
 \usepackage{verbatim}
+\usepackage{mathtools}
+\usepackage{amsmath}
 
 
 \linespread{1.5}
@@ -54,15 +56,20 @@ Correlação de Pearson presentes na literatura?  }}
     \\\vspace{1cm}
     \begin{tabular}{rl}
 	  \textbf{Aluno}:   Carlos~Eduardo~Machado &  
-	  \textbf{RA}:         \\
+	  \textbf{RA}:          059582 \\ 
 	  \textbf{Aluno}:        Tiago~Chedraoui~Silva & 
 	  \textbf{RA}:        082941 \\
+	  \textbf{Aluno}:        William~Marques~Dias & 
+	  \textbf{RA}:        065106 \\
 	\end{tabular}
   \end{center}
   \vspace{0.5cm}
 
   \begin{abstract}
-
+O coeficiente de correlação de Pearson é amplamente usado para
+comparar imagens, contudo ele apresenta sérias limitações. Esse
+trabalho consistiu na validação da análise realizada no Artigo ''The
+Ineffectiveness of the Correlation Coefficient for Image Comparisons''.
   \end{abstract}
   % Sumário
   \tableofcontents
@@ -70,6 +77,21 @@ Correlação de Pearson presentes na literatura?  }}
 
 \vspace{2mm}
 \newpage
+
+\section{Introdução}
+
+
+\begin{equation*}r = \frac{  
+\displaystyle{\sum_{i=1}^n (x_i-\bar{x})(y_i-  
+\bar{y})}}{\displaystyle{\left[  
+\sum_{i=1}^n(x_i-\bar{x})^2  
+\sum_{i=1}^n(y_i-\bar{y})^2\right]^{1/2}}}  
+\end{equation*}  
+\section{Métodos}
+\subsection{Código}
+
+\section{Resultados}
+
 \section{Conclusão}
 
 % ******************************************************
