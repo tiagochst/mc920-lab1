@@ -2,6 +2,7 @@ import pygame
 import pygame.camera
 import capture
 import numpy
+import sys
 from pygame.locals import *
 
 # Initialize screen:
@@ -13,9 +14,13 @@ pygame.display.set_caption('MC920')
 pygame.camera.init()
 webcam = capture.Capture()
 
-# Event loop:
+# Initialize settings:
+frame_count = 0
 calibration = True
+save_mode = "-s" in sys.argv
 clock = pygame.time.Clock()
+
+# Event loop:
 while True:
     clock.tick(60)
 
@@ -28,6 +33,7 @@ while True:
         calibration = 0
 
         # Store base image:
+        pygame.image.save(cam, "Base.jpg")
         x = pygame.surfarray.array3d(cam)
         x = numpy.dot(x, (0.30, 0.59, 0.11))
         xm = numpy.mean(x)
@@ -52,7 +58,14 @@ while True:
         diff_y = diff_y ** 2
         denominator_y = numpy.sqrt(diff_y.sum())
         r = nominator / (denominator_x * denominator_y)
-        print r
+
+        # Save images to file and print coefficient value:
+        if not save_mode:
+            print r
+        elif frame_count % 10 == 0:
+            pygame.image.save(cam, "%03d.jpg" % frame_count)
+            print "r("+str(frame_count)+") =", r
+        frame_count = frame_count + 1
 
     # Draw everything:
     screen.blit(cam, (0,0))
