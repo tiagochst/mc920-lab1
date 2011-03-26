@@ -21,11 +21,16 @@
 \usepackage{amsmath}
 
 
+\usepackage[compact]{titlesec}
+\titlespacing{\section}{0pt}{*0}{*0}
+\titlespacing{\subsection}{0pt}{*0}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+
 \linespread{1.5}
 \geometry{ 
 	a4paper,	% Formato do papel
 	tmargin=30mm,	% Margem superior
-	bmargin=40mm,	% Margem inferior
+	bmargin=30mm,	% Margem inferior
 	lmargin=20mm,	% Margem esquerda
 	rmargin=20mm,	% Margem direita
 	footskip=20mm	% Espaço entre o rodapé e o fim do texto
@@ -136,8 +141,15 @@ analisar os efeitos no cálculo do coeficiente produzidos por tais modificaçõe
 % \subsection{Código}
 
 \newpage
-\section{Resultados}
+\section{Comparação de imagens}
 
+Para a comparação de imagens através do coeficiente, foram realizados diferentes testes
+. As seções a seguir apresentam as variações dos testes: utilização
+das mesmas figuras do artigo ´´The Ineffectiveness of the Correlation
+Coefficient for Image Comparisons'', sobreposição de imagem , remoção de objetos, detecção
+de movimentos e alteração de luminosidade.  
+
+\subsection{Figuras do artigo }
 Utilizando as figuras \ref{fig1} e \ref{fig1Diff}usados no artigo ´´The Ineffectiveness of the Correlation
 Coefficient for Image Comparisons'', na qual há uma simples
 sobreposição de uma palavra sobre a imagem, obtemos um valor de r de
@@ -145,60 +157,59 @@ aproximadamente 0.89, enquanto no artigo o valor de r obtido vale 0.94.
 
 \begin{figure}[h!]
 \begin{center}
-\subfloat[Imagem original]{\includegraphics[scale=0.45]{photos/c1a}\label{fig1}}
+\subfloat[Imagem original]{\includegraphics[scale=0.35]{photos/c1a}\label{fig1}}
 \hspace{10mm}
-\subfloat[Sobreposição de uma palavra sobre a imagem]{\includegraphics[scale=0.45]{photos/c1b}\label{fig1Diff}}
+\subfloat[Sobreposição de uma palavra sobre a imagem]{\includegraphics[scale=0.35]{photos/c1b}\label{fig1Diff}}
 \caption{Comparação entre uma imagem original e outra com sobreposição
   de palavra}
 \end{center}
 \end{figure}
 
 Para as imagens \ref{fig2} e \ref{fig2Diff}, na qual retira-se um
-clips da imagem original, obteu-se um valor de r=0.90
-enquanto no artigo r=0.98.
+clips da imagem original, obteu-se um valor de $r\approx 0.90$
+enquanto no artigo $r\approx 0.98$.
 %figura clips
 
 \begin{figure}[h!]
 \begin{center}
-\subfloat[Original]{\includegraphics[scale=0.45]{photos/c2a}\label{fig2}}
+\subfloat[Original]{\includegraphics[scale=0.35]{photos/c2a}\label{fig2}}
 \hspace{10mm}
-\subfloat[Remoção de um clips na imagem original]{\includegraphics[scale=0.45]{photos/c2b}\label{fig2Diff}}
+\subfloat[Remoção de um clips na imagem original]{\includegraphics[scale=0.35]{photos/c2b}\label{fig2Diff}}
 \caption{Comparação entre imagem com um objeto e outra sem esse objeto
  }
 \end{center}
 \end{figure}
 
 \newpage
-
+\subsection{Sobreposição de imagem}
 Para a imagem original \ref{fig3}, houve uma sobreposição da palavra
 ''CWT'' na imagem \ref{fig3Diff1} e na imagem \ref{fig3Diff2},
 porém em posição diferente. Obteve-se para a imagem \ref{fig3Diff1}
-um valor de r=0.99 se comparado à original e para a imagem \ref{fig3Diff2} 
-um valor de r=0.98.
+um valor de $r\approx 0.99$ se comparado à original e para a imagem \ref{fig3Diff2} 
+um valor de $r\approx 0.98$.
 %m15 fig1
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[scale=0.35]{photos/m15_tricome}\label{fig3}
+\includegraphics[scale=0.25]{photos/m15_tricome}\label{fig3}
 \caption{Figura original a ser comparada}
 \end{center}
 \end{figure}
 
 
 
+\vspace{-0.5cm}
 %m15 fig1
 \begin{figure}[h!]
 \begin{center}
-\subfloat[Sobreposição da palavra CTW na figura original ]{\includegraphics[scale=0.22]{photos/m15_tricome_b}\label{fig3Diff1}}
+\subfloat[Sobreposição da palavra CTW na figura original ]{\includegraphics[scale=0.18]{photos/m15_tricome_b}\label{fig3Diff1}}
 \hspace{5mm}
-\subfloat[Alteração da posição da palavra CTW  ]{\includegraphics[scale=0.22]{photos/m15_tricome_c}\label{fig3Diff2}}
+\subfloat[Alteração da posição da palavra CTW  ]{\includegraphics[scale=0.18]{photos/m15_tricome_c}\label{fig3Diff2}}
 \caption{Comparação entre a foto original e duas fotos compostas pela
   sobreposição de uma palavra à imagem original}
 \end{center}
 \end{figure}
 
-\newpage
-
-
+\vspace{-0.5cm}
 Para a imagem original \ref{fig3}, a imagem de Lena foi sobreposta nas
 imagens \ref{fig3Diff3} e \ref{fig3Diff3}, sendo a primeira mais
 transparente.
@@ -208,17 +219,21 @@ Se comparado à imagem original as imagens \ref{fig3Diff3} e
 \begin{figure}[h!]
 \begin{center}
 \subfloat[Sobreposição da foto de Lena com grau de transparência maior
- ]{\includegraphics[scale=0.22]{photos/m15_tricome_d}\label{fig3Diff3}}
+ ]{\includegraphics[scale=0.18]{photos/m15_tricome_d}\label{fig3Diff3}}
 \hspace{10mm}
 \subfloat[Sobreposição  da foto de Lena com grau de transparência
-menor ]{\includegraphics[scale=0.22]{photos/m15_tricome_e}\label{fig3Diff4}}
+menor ]{\includegraphics[scale=0.18]{photos/m15_tricome_e}\label{fig3Diff4}}
 \caption{Comparação entre a imagem original e duas imagens compostas pela sobreposição
   de uma outra imagem à imagem original}
 \end{center}
 \end{figure}
 
-%livros remocao de objeto
-
+\newpage
+\subsection{Remoção de objeto}
+%-%-%-%-%-%-%-%
+%livros remocao 
+% de objeto
+%-%-%-%-%-%-%-%
 Para a análise da remoção de um objeto da imagem, utilizou-se uma
 sequência de imagens retiradas a cada 10s durante as quais é retirada
 um livro de um estante de livro.
@@ -229,12 +244,11 @@ Os valores de r podem ser vistos na tabela \ref{tab:livro}.
 
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[scale=0.35]{photos/livros/gBase} \label{livro}
+\includegraphics[scale=0.25]{photos/livros/gBase} \label{livro}
 \caption{Remoção de item: figura original a ser comparada}
 \end{center}
 \end{figure}
-
-\newpage
+\vspace{-0.5cm}
 
 \begin{figure}[h!]
 \begin{center}
@@ -245,6 +259,7 @@ Os valores de r podem ser vistos na tabela \ref{tab:livro}.
 \end{center}
 \end{figure}
 
+\vspace{-0.5cm}
 
 \begin{figure}[h!]
 \begin{center}
@@ -256,6 +271,7 @@ Os valores de r podem ser vistos na tabela \ref{tab:livro}.
 \end{center}
 \end{figure}
 
+\vspace{-1.0cm}
 %-%-%-%-%-%-%
 % Tabela com 
 % todos os 
@@ -283,7 +299,12 @@ Os valores de r podem ser vistos na tabela \ref{tab:livro}.
 % Teste Porta
 %-%-%-%-%-%-%
 \newpage
-Para um outro teste dinâmico, obteve-se as sequências de imagens da
+\subsection{Detecção de movimento}
+As comparações a seguir foram feitas para analisar a movimentação de uma cena, como por exemplo em câmeras de
+vigilância. Ou seja, uma comparação entre uma sequência de imagens.
+
+\subsubsection{Abertura de uma porta}
+As imagens abaixo são uma sequência de imagens da
 abertura de uma porta.
 
 \begin{figure}[h!]
@@ -293,6 +314,7 @@ abertura de uma porta.
 \end{center}
 \end{figure}
 
+\vspace{-0.5cm}
 \begin{figure}[h!]
 \begin{center}
 \subfloat[Imagem em t=0s ]{\includegraphics[scale=0.22]{photos/porta/g000}\label{fig5Diff1}}
@@ -302,6 +324,7 @@ abertura de uma porta.
 \end{center}
 \end{figure}
 
+\vspace{-0.5cm}
 
 \begin{figure}[h!]
 \begin{center}
@@ -313,6 +336,7 @@ abertura de uma porta.
 \end{center}
 \end{figure}
 
+\vspace{-0.5cm}
 
 \begin{figure}[h!]
 \begin{center}
@@ -324,6 +348,7 @@ abertura de uma porta.
 \end{center}
 \end{figure}
 
+\vspace{-0.5cm}
 %-%-%-%-%-%-%
 % Tabela com 
 % todos os 
@@ -349,7 +374,165 @@ abertura de uma porta.
 \end{table}
 
 
+%-%-%-%-%-%-%
+% Teste Pessoa
+%-%-%-%-%-%-%
 \newpage
+\subsubsection{Passagem de uma pessoa}
+Para um outro teste dinâmico, obteve-se as sequências de imagens da
+abertura de uma porta.
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[scale=0.35]{photos/pessoa/gBase}
+\caption{Remoção de item: figura original a ser comparada}
+\end{center}
+\label{pessoa}
+\end{figure}
+
+\newpage
+\begin{figure}[h!]
+\begin{center}
+\subfloat[Imagem em t=0s ]{\includegraphics[scale=0.26]{photos/pessoa/g000}\label{fig6Diff1}}
+\hspace{10mm}
+\subfloat[Imagem em t=10s ]{\includegraphics[scale=0.26]{photos/pessoa/g010}\label{fig6Diff2}}
+\caption{Comparação entre a imagem original: tempos 0s e 10 s }
+\end{center}
+\end{figure}
+
+
+\begin{figure}[h!]
+\begin{center}
+\subfloat[Imagem em t=20s
+ ]{\includegraphics[scale=0.26]{photos/pessoa/g020}\label{fig6Diff3}}
+\hspace{10mm}
+\subfloat[Livro retirado: t=30s ]{\includegraphics[scale=0.26]{photos/pessoa/g030}\label{fig6Diff4}}
+\caption{Comparação entre a imagem original: tempos 20s e 30s }
+\end{center}
+\end{figure}
+
+
+
+%-%-%-%-%-%-%-%-%
+% Tabela pessoa
+%-%-%-%-%-%-%-%-%
+\begin{table}[h!]
+  \begin{center}
+    \caption{Valor do coeficiente de pearson para sequência de imagens
+      da passagem de uma pessoa}
+    \begin{tabular}{|c|c|c|}
+      \hline
+      Figura original & Figura modificada & r\\
+      \hline
+      13 &  \ref{fig6Diff1} & 0.999314\\
+      13 &  \ref{fig6Diff2} & 0.972234\\
+      13 &  \ref{fig6Diff3} & 0.971343\\
+      13 &  \ref{fig6Diff4} & 0.986933\\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+
+%-%-%-%-%-%-%
+% Teste Luzes
+%-%-%-%-%-%-%
+\newpage
+\subsection{Fator Luminosidade}
+Para um outro teste dinâmico, obteve-se as sequências de imagens para
+a iluminação do local.
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[scale=0.35]{photos/luzes/gBase}
+\caption{Remoção de item: figura original a ser comparada}
+\end{center}
+\label{luzes}
+\end{figure}
+
+\begin{figure}[h!]
+\begin{center}
+\subfloat[Imagem em t=0s ]{\includegraphics[scale=0.22]{photos/luzes/g000}\label{fig7Diff1}}
+\hspace{10mm}
+\subfloat[Imagem em t=10s ]{\includegraphics[scale=0.22]{photos/luzes/g010}\label{fig7Diff2}}
+\caption{Comparação entre a imagem original: tempos 0s e 10 s }
+\end{center}
+\end{figure}
+
+
+\begin{figure}[h!]
+\begin{center}
+\subfloat[Imagem em t=20s
+ ]{\includegraphics[scale=0.22]{photos/luzes/g020}\label{fig7Diff3}}
+\hspace{10mm}
+\subfloat[Livro retirado: t=30s ]{\includegraphics[scale=0.22]{photos/luzes/g030}\label{fig7Diff4}}
+\caption{Comparação entre a imagem original: tempos 20s e 30s }
+\end{center}
+\end{figure}
+
+
+\begin{figure}[h!]
+\begin{center}
+\subfloat[Imagem em t=20s
+ ]{\includegraphics[scale=0.22]{photos/luzes/g040}\label{fig7Diff5}}
+\hspace{10mm}
+\subfloat[Livro retirado: t=30s ]{\includegraphics[scale=0.22]{photos/luzes/g050}\label{fig7Diff6}}
+\caption{Comparação entre a imagem original: tempos 20s e 30s }
+\end{center}
+\end{figure}
+
+%-%-%-%-%-%-%-%-%
+% Tabela luzes
+%-%-%-%-%-%-%-%-%
+\begin{table}[h!]
+  \begin{center}
+    \caption{Valor do coeficiente de pearson para sequência de imagens
+      de iluminação do local}
+    \begin{tabular}{|c|c|c|}
+      \hline
+      Figura original & Figura modificada & r\\
+      \hline
+      16 &  \ref{fig7Diff1} & 0.996326\\
+      16 &  \ref{fig7Diff2} & 0.995717\\
+      16 &  \ref{fig7Diff3} & 0.952222\\
+      16 &  \ref{fig7Diff4} & 0.862955\\
+      16 &  \ref{fig7Diff5} & 0.798435\\
+      16 &  \ref{fig7Diff6} &  0.818334\\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+\newpage
+\section{Resultados}
+Agrupando os resultados na tabela \ref{tab:final} percebe-se que o
+coeficiente de correlação de Pearson é realmente ineficaz, já que a
+comparação cujo coeficiente foi o menor é próximo a $r=0.8$ referente
+aos testes de iluminação no qual abriu-se a geladeira, e no teste de
+abertura de uma porta.
+
+A sobreposição de imagens pouco modificou o valor do coeficiente,
+sendo que a sobreposição de um texto é literalmente imperceptível
+enquanto a sobreposição de uma imagem só começa a ser perceptível se
+sua transparência é mínima. Mesmo assim a alteração do coeficiente não
+passa de 10\%.
+
+A remoção de um objeto da figura, em nosso caso a remoção de um livro
+na prateleira só teve uma variação próxima a 8\% no momento em que o
+braço de uma pessoa apareceu na imagem. Contudo, quando somente o
+livro sumiu o valor de $r$ é próximo a 98\% o que implica na não
+percepção de uma mudança simples.
+
+Na seção de detecção de movimento, a passagem de uma pessoa também
+apresenta baixa mudança no valor do coeficiente ($r=0,97$), apenas
+mudanças bruscas de mudança no ambiente como a abertura de uma porta
+causaram impacto maior no valor do coeficiente.
+
+Por fim a iluminação do ambiente, provocou mudanças diferentes a cada
+tempo. Ao ligar a luz do local, as diferenças entre os valores dos
+coeficientes em imagens em sequência chegou a $\Delta r=0.05 $. Já a
+abertura de uma geladeira além de iluminar altera uma grande área da
+figura, assim o valor de r aproxima-se de $r\approx 0.8$
+
 %-%-%-%-%-%-%
 % Tabela com 
 % todos os 
@@ -378,12 +561,24 @@ abertura de uma porta.
       10 &  \ref{fig5Diff4} & 0.862955\\
       10 &  \ref{fig5Diff5} & 0.798436\\
       10 &  \ref{fig5Diff6} & 0.818334\\
+      13 &  \ref{fig6Diff1} & 0.999314\\
+      13 &  \ref{fig6Diff2} & 0.972234\\
+      13 &  \ref{fig6Diff3} & 0.971343\\
+      13 &  \ref{fig6Diff4} & 0.986933\\
+      16 &  \ref{fig7Diff1} & 0.996326\\
+      16 &  \ref{fig7Diff2} & 0.995717\\
+      16 &  \ref{fig7Diff3} & 0.952222\\
+      16 &  \ref{fig7Diff4} & 0.862955\\
+      16 &  \ref{fig7Diff5} & 0.798435\\
+      16 &  \ref{fig7Diff6} &  0.818334\\
       \hline
     \end{tabular}
-  \end{center}
+  \end{center}\label{tab:final}
 \end{table}
 
 
+
+\newpage
 \section{Conclusão}
 Utilizamos o coeficiente de correlação de Pearson  
  como método de comparação de imagens. Foram feitas diversas
