@@ -138,8 +138,10 @@ analisar os efeitos no cálculo do coeficiente produzidos por tais modificaçõe
 \newpage
 \section{Resultados}
 
-Utilizando as figuras usados no artigo ´´The Ineffectiveness of the Correlation
-Coefficient for Image Comparisons''
+Utilizando as figuras \ref{fig1} e \ref{fig1Diff}usados no artigo ´´The Ineffectiveness of the Correlation
+Coefficient for Image Comparisons'', na qual há uma simples
+sobreposição de uma palavra sobre a imagem, obtemos um valor de r de
+aproximadamente 0.89, enquanto no artigo o valor de r obtido vale 0.94.
 
 \begin{figure}[h!]
 \begin{center}
@@ -151,20 +153,28 @@ Coefficient for Image Comparisons''
 \end{center}
 \end{figure}
 
-
-%figura clipes
+Para as imagens \ref{fig2} e \ref{fig2Diff}, na qual retira-se um
+clips da imagem original, obteu-se um valor de r=0.90
+enquanto no artigo r=0.98.
+%figura clips
 
 \begin{figure}[h!]
 \begin{center}
 \subfloat[Original]{\includegraphics[scale=0.45]{photos/c2a}\label{fig2}}
 \hspace{10mm}
-\subfloat[Remoção de um clipe na imagem original]{\includegraphics[scale=0.45]{photos/c2b}\label{fig2Diff}}
+\subfloat[Remoção de um clips na imagem original]{\includegraphics[scale=0.45]{photos/c2b}\label{fig2Diff}}
 \caption{Comparação entre imagem com um objeto e outra sem esse objeto
  }
 \end{center}
 \end{figure}
 
 \newpage
+
+Para a imagem original \ref{fig3}, houve uma sobreposição da palavra
+''CWT'' na imagem \ref{fig3Diff1} e na imagem \ref{fig3Diff2},
+porém em posição diferente. Obteve-se para a imagem \ref{fig3Diff1}
+um valor de r=0.99 se comparado à original e para a imagem \ref{fig3Diff2} 
+um valor de r=0.98.
 %m15 fig1
 \begin{figure}[h!]
 \begin{center}
@@ -188,6 +198,12 @@ Coefficient for Image Comparisons''
 
 \newpage
 
+
+Para a imagem original \ref{fig3}, a imagem de Lena foi sobreposta nas
+imagens \ref{fig3Diff3} e \ref{fig3Diff3}, sendo a primeira mais
+transparente.
+Se comparado à imagem original as imagens \ref{fig3Diff3} e
+\ref{fig3Diff3} apresentam, respectivamente , r=0.93 e r=0.90 . 
 %m15 fig1
 \begin{figure}[h!]
 \begin{center}
@@ -201,12 +217,149 @@ menor ]{\includegraphics[scale=0.22]{photos/m15_tricome_e}\label{fig3Diff4}}
 \end{center}
 \end{figure}
 
-\begin{table}
+%livros remocao de objeto
+
+Para a análise da remoção de um objeto da imagem, utilizou-se uma
+sequência de imagens retiradas a cada 10s durante as quais é retirada
+um livro de um estante de livro.
+A figura \ref{fig4Diff1} é muito semelhante à imagem original, nas
+figuras posteriores fez-se o movimento para a retirada do livro da
+imagem, que é concluída na imagem \ref{fig4Diff4}.
+Os valores de r podem ser vistos na tabela \ref{tab:livro}.
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[scale=0.35]{photos/livros/gBase} \label{livro}
+\caption{Remoção de item: figura original a ser comparada}
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h!]
+\begin{center}
+\subfloat[Imagem em t=0s ]{\includegraphics[scale=0.22]{photos/livros/g000}\label{fig4Diff1}}
+\hspace{10mm}
+\subfloat[Imagem em t=10s ]{\includegraphics[scale=0.22]{photos/livros/g010}\label{fig4Diff2}}
+\caption{Comparação entre a imagem original: tempo até 10 segundos }
+\end{center}
+\end{figure}
+
+
+\begin{figure}[h!]
+\begin{center}
+\subfloat[Imagem em t=20s
+ ]{\includegraphics[scale=0.22]{photos/livros/g020}\label{fig4Diff3}}
+\hspace{10mm}
+\subfloat[Livro retirado: t=30s ]{\includegraphics[scale=0.22]{photos/livros/g030}\label{fig4Diff4}}
+\caption{Comparação entre a imagem original: tempo até 30s }
+\end{center}
+\end{figure}
+
+%-%-%-%-%-%-%
+% Tabela com 
+% todos os 
+% resultados
+%-%-%-%-%-%-%
+\begin{table}[h!]
   \begin{center}
-    \caption{Valor do coeficiente de pearson para várias imagens}
+    \caption{Valor do coeficiente de pearson para as várias imagens de
+      remoção de um livro da estante}
     \begin{tabular}{|c|c|c|}
       \hline
-      
+      Figura original & Figura modificada & r\\
+      \hline
+      6 &  \ref{fig4Diff1} & 0.999600\\
+      6 &  \ref{fig4Diff2} &  0.917454\\
+      6 &  \ref{fig4Diff3} &   0.952869\\
+      6 &  \ref{fig4Diff4} &   0.983264\\
+      \hline
+    \end{tabular}\label{tab:livro}
+  \end{center}
+\end{table}
+
+
+%-%-%-%-%-%-%
+% Teste Porta
+%-%-%-%-%-%-%
+\newpage
+Para um outro teste dinâmico, obteve-se as sequências de imagens da
+abertura de uma porta.
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[scale=0.35]{photos/porta/gBase} \label{porta}
+\caption{Remoção de item: figura original a ser comparada}
+\end{center}
+\end{figure}
+
+\begin{figure}[h!]
+\begin{center}
+\subfloat[Imagem em t=0s ]{\includegraphics[scale=0.22]{photos/porta/g000}\label{fig5Diff1}}
+\hspace{10mm}
+\subfloat[Imagem em t=10s ]{\includegraphics[scale=0.22]{photos/porta/g010}\label{fig5Diff2}}
+\caption{Comparação entre a imagem original: tempos 0s e 10 s }
+\end{center}
+\end{figure}
+
+
+\begin{figure}[h!]
+\begin{center}
+\subfloat[Imagem em t=20s
+ ]{\includegraphics[scale=0.22]{photos/porta/g020}\label{fig5Diff3}}
+\hspace{10mm}
+\subfloat[Livro retirado: t=30s ]{\includegraphics[scale=0.22]{photos/porta/g030}\label{fig5Diff4}}
+\caption{Comparação entre a imagem original: tempos 20s e 30s }
+\end{center}
+\end{figure}
+
+
+\begin{figure}[h!]
+\begin{center}
+\subfloat[Imagem em t=40s
+ ]{\includegraphics[scale=0.22]{photos/porta/g040}\label{fig5Diff5}}
+\hspace{10mm}
+\subfloat[Imagem em t=50s ]{\includegraphics[scale=0.22]{photos/porta/g050}\label{fig5Diff6}}
+\caption{Comparação entre a imagem original: tempos 40s e 50s }
+\end{center}
+\end{figure}
+
+%-%-%-%-%-%-%
+% Tabela com 
+% todos os 
+% resultados
+%-%-%-%-%-%-%
+\begin{table}[h!]
+  \begin{center}
+    \caption{Valor do coeficiente de pearson para sequência de imagens
+      de abertura de um porta}
+    \begin{tabular}{|c|c|c|}
+      \hline
+      Figura original & Figura modificada & r\\
+      \hline
+      10 &  \ref{fig5Diff1} & 0.996326\\
+      10 &  \ref{fig5Diff2} & 0.995717\\
+      10 &  \ref{fig5Diff3} & 0.952222\\
+      10 &  \ref{fig5Diff4} & 0.862955\\
+      10 &  \ref{fig5Diff5} & 0.798436\\
+      10 &  \ref{fig5Diff6} & 0.818334\\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+
+\newpage
+%-%-%-%-%-%-%
+% Tabela com 
+% todos os 
+% resultados
+%-%-%-%-%-%-%
+\begin{table}[h!]
+  \begin{center}
+    \caption{Valor do coeficiente de pearson para todos as comparações}
+    \begin{tabular}{|c|c|c|}
+      \hline
       Figura original & Figura modificada & r\\
       \hline
       \ref{fig1} &  \ref{fig1Diff} &  0.887291 \\
@@ -215,10 +368,22 @@ menor ]{\includegraphics[scale=0.22]{photos/m15_tricome_e}\label{fig3Diff4}}
       \ref{fig3} & \ref{fig3Diff2} &  0.985331\\
       \ref{fig3} &  \ref{fig3Diff3} &  0.936883\\
       \ref{fig3} &  \ref{fig3Diff4} &  0.905874\\
+      6 &  \ref{fig4Diff1} & 0.999600\\
+      6 &  \ref{fig4Diff2} &  0.917454\\
+      6 &  \ref{fig4Diff3} &   0.952869\\
+      6 &  \ref{fig4Diff4} &   0.983264\\
+      10 &  \ref{fig5Diff1} & 0.996326\\
+      10 &  \ref{fig5Diff2} & 0.995717\\
+      10 &  \ref{fig5Diff3} & 0.952222\\
+      10 &  \ref{fig5Diff4} & 0.862955\\
+      10 &  \ref{fig5Diff5} & 0.798436\\
+      10 &  \ref{fig5Diff6} & 0.818334\\
       \hline
     \end{tabular}
   \end{center}
 \end{table}
+
+
 \section{Conclusão}
 Utilizamos o coeficiente de correlação de Pearson  
  como método de comparação de imagens. Foram feitas diversas
