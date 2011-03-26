@@ -117,14 +117,14 @@ diversas limitação, sendo considerado ineficaz em alguns papers.% ~\cite{paper
  
 Assim, o objetivo deste trabalho é apresentar, através de exemplos, o
 desempenho do coeficiente para comparações de imagens, especialmente
-em aplicações de segurança e, posteriomrente, compará-las às considerações existentes na literatura.
+em aplicações de segurança e, posteriormente, compará-las às considerações existentes na literatura.
 
 %O paper é organizado a seção conclui
 
 \section{Métodos}
 
 Desenvolveu-se em python um programa de análise de imagens baseada no
-coeficiente de correlação de pearson. 
+coeficiente de correlação de Pearson. 
 Dado duas imagens para analisar duas imagens, sendo a imagem original dada por $x$  e a
 imagem modificada por $y$ na equação \eqref{eq:r}, retorna-se o valor de $r$.
 
@@ -150,7 +150,7 @@ Coefficient for Image Comparisons'', sobreposição de imagem , remoção de obj
 de movimentos e alteração de luminosidade.  
 
 \subsection{Figuras do artigo }
-Utilizando as figuras \ref{fig1} e \ref{fig1Diff}usados no artigo ´´The Ineffectiveness of the Correlation
+Utilizando as figuras \ref{fig1} e \ref{fig1Diff} usados no artigo ´´The Ineffectiveness of the Correlation
 Coefficient for Image Comparisons'', na qual há uma simples
 sobreposição de uma palavra sobre a imagem, obtemos um valor de r de
 aproximadamente 0.89, enquanto no artigo o valor de r obtido vale 0.94.
@@ -279,7 +279,7 @@ Os valores de r podem ser vistos na tabela \ref{tab:livro}.
 %-%-%-%-%-%-%
 \begin{table}[h!]
   \begin{center}
-    \caption{Valor do coeficiente de pearson para as várias imagens de
+    \caption{Valor do coeficiente de Pearson para as várias imagens de
       remoção de um livro da estante}
     \begin{tabular}{|c|c|c|}
       \hline
@@ -349,14 +349,13 @@ abertura de uma porta.
 \end{figure}
 
 \vspace{-0.5cm}
-%-%-%-%-%-%-%
-% Tabela com 
-% todos os 
-% resultados
-%-%-%-%-%-%-%
+%-%-%-%-%-%-%-%-%-%-%-%-%
+% Tabela com  resultados  
+% da abertura de um porta
+%-%-%-%-%-%-%-%-%-%-%-%-%
 \begin{table}[h!]
   \begin{center}
-    \caption{Valor do coeficiente de pearson para sequência de imagens
+    \caption{Valor do coeficiente de Pearson para sequência de imagens
       de abertura de um porta}
     \begin{tabular}{|c|c|c|}
       \hline
@@ -380,7 +379,7 @@ abertura de uma porta.
 \newpage
 \subsubsection{Passagem de uma pessoa}
 Para um outro teste dinâmico, obteve-se as sequências de imagens da
-abertura de uma porta.
+passagem de uma pessoa.
 
 \begin{figure}[h!]
 \begin{center}
@@ -418,7 +417,7 @@ abertura de uma porta.
 %-%-%-%-%-%-%-%-%
 \begin{table}[h!]
   \begin{center}
-    \caption{Valor do coeficiente de pearson para sequência de imagens
+    \caption{Valor do coeficiente de Pearson para sequência de imagens
       da passagem de uma pessoa}
     \begin{tabular}{|c|c|c|}
       \hline
@@ -486,7 +485,7 @@ a iluminação do local.
 %-%-%-%-%-%-%-%-%
 \begin{table}[h!]
   \begin{center}
-    \caption{Valor do coeficiente de pearson para sequência de imagens
+    \caption{Valor do coeficiente de Pearson para sequência de imagens
       de iluminação do local}
     \begin{tabular}{|c|c|c|}
       \hline
@@ -540,7 +539,7 @@ figura, assim o valor de r aproxima-se de $r\approx 0.8$
 %-%-%-%-%-%-%
 \begin{table}[h!]
   \begin{center}
-    \caption{Valor do coeficiente de pearson para todos as comparações}
+    \caption{Valor do coeficiente de Pearson para todos as comparações}
     \begin{tabular}{|c|c|c|}
       \hline
       Figura original & Figura modificada & r\\
