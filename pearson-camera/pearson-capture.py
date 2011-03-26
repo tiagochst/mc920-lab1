@@ -33,13 +33,14 @@ while True:
         calibration = 0
 
         # Store base image:
-        pygame.image.save(cam, "Base.jpg")
         x = pygame.surfarray.array3d(cam)
         x = numpy.dot(x, (0.30, 0.59, 0.11))
         xm = numpy.mean(x)
         diff_x = x - xm
         diff_x2 = diff_x ** 2
         denominator_x = numpy.sqrt(diff_x2.sum())
+        if save_mode:
+            pygame.image.save(cam, "Base.jpg")
 
     # Capture images:
     if calibration:
@@ -59,7 +60,7 @@ while True:
         denominator_y = numpy.sqrt(diff_y.sum())
         r = nominator / (denominator_x * denominator_y)
 
-        # Save images to file and print coefficient value:
+        # Save image to file and print coefficient value:
         if not save_mode:
             print r
         elif frame_count % 10 == 0:
