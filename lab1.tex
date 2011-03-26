@@ -84,13 +84,13 @@ utilizado na análise estatística, reconhecimento de padrões e
 processamento de imagens.
 Na área de processamento de imagens ele é utilizado na comparação de
 duas imagens para fins de registro de imagens, reconhecimento de
-objetos, e medição disparidade ~\cite{paper}. Para imagens digitais monocromáticas, a correlação de Pearson é definido como :
+objetos, e medição disparidade. Para imagens digitais monocromáticas, a correlação de Pearson é definido como :
 
 \begin{equation}r = \frac{  
 \displaystyle{\sum_{i} (x_i-\bar{x})(y_i-  
 \bar{y})}}{\displaystyle{\left[  
 \sum_{i}(x_i-\bar{x})^2  
-\sum_{i}(y_i-\bar{y})^2\right]^{1/2}}}  
+\sum_{i}(y_i-\bar{y})^2\right]^{1/2}}}  \label{eq:r}
 \end{equation}  
 
 Onde $x_i$ é a intensidade dos pixels na imagem 1, $y_i$ é a
@@ -107,18 +107,40 @@ aplicações de segurança, como, por exemplo, vigilância. Normalmente,
 o coeficiente de relação é usado para comparar duas imagens do mesmo
 objeto ou cena durante vários momentos diferentes.
 
-O objetivo deste trabalho é apresentar, através de exemplos, o
+Não obstante à sua utilização, o coeficiente de correlação possui
+diversas limitação, sendo considerado ineficaz em alguns papers.% ~\cite{paper}.
+ 
+Assim, o objetivo deste trabalho é apresentar, através de exemplos, o
 desempenho do coeficiente para comparações de imagens, especialmente
-em aplicações de segurança.
+em aplicações de segurança e, posteriomrente, compará-las às considerações existentes na literatura.
+
+%O paper é organizado a seção conclui
 
 \section{Métodos}
 
+Desenvolveu-se em python um programa de análise de imagens baseada no
+coeficiente de correlação de pearson. 
+Dado duas imagens para analisar duas imagens, sendo a imagem original dada por $x$  e a
+imagem modificada por $y$ na equação \eqref{eq:r}, retorna-se o valor de $r$.
 
+Inicialmente, para a análise do coeficiente, utilizou-se algumas imagens
+previamente analisadas no artigo ´´The Ineffectiveness of the Correlation
+Coefficient for Image Comparisons'' através do qual pretendíamos
+confirmar os resultados obtidos.
 
-\subsection{Código}
+Posteriormente, procurou-se alterar outra imagem com a
+sobreposição de outra imagem. Alterou-se algumas características da
+imagem sobreposta, como por exemplo, a posição, a opacidade, para
+analisar os efeitos no cálculo do coeficiente produzidos por tais modificações. 
+
+% \subsection{Código}
 
 \newpage
 \section{Resultados}
+
+Utilizando as figuras usados no artigo ´´The Ineffectiveness of the Correlation
+Coefficient for Image Comparisons''
+
 \begin{figure}[h!]
 \begin{center}
 \subfloat[Imagem original]{\includegraphics[scale=0.45]{photos/c1a}\label{fig1}}
@@ -198,6 +220,18 @@ menor ]{\includegraphics[scale=0.22]{photos/m15_tricome_e}\label{fig3Diff4}}
   \end{center}
 \end{table}
 \section{Conclusão}
+Utilizamos o coeficiente de correlação de Pearson  
+ como método de comparação de imagens. Foram feitas diversas
+ comparações de forma a obter-se uma gama de resultados suficientes
+ para a análise do coeficiente.
+
+O coeficiente de correlação de Pearson, assim como em outras
+avaliações na literatura, demonstrou-se inefetivo. Portanto, os
+resultados corroboram com o artigo de Eugene K. Yen e
+Roger G. Johnston.
+
+%Necessária?
+%\section{Agradecimentos}
 
 % ******************************************************
 % 		REFERENCIAS BIBLIOGRÁFICAS
