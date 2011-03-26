@@ -121,10 +121,9 @@ em aplicações de segurança.
 \section{Resultados}
 \begin{figure}[h!]
 \begin{center}
-\subfloat[Imagem original]{\includegraphics[scale=0.45]{photos/c1a}\label{
-cacheDados}}
+\subfloat[Imagem original]{\includegraphics[scale=0.45]{photos/c1a}\label{fig1}}
 \hspace{10mm}
-\subfloat[Sobreposição de uma palavra sobre a imagem]{\includegraphics[scale=0.45]{photos/c1b}\label{cacheIns}}
+\subfloat[Sobreposição de uma palavra sobre a imagem]{\includegraphics[scale=0.45]{photos/c1b}\label{fig1Diff}}
 \caption{Comparação entre uma imagem original e outra com sobreposição
   de palavra}
 \end{center}
@@ -135,11 +134,11 @@ cacheDados}}
 
 \begin{figure}[h!]
 \begin{center}
-\subfloat[Original]{\includegraphics[scale=0.45]{photos/c2a}\label{
-cacheDados}}
+\subfloat[Original]{\includegraphics[scale=0.45]{photos/c2a}\label{fig2}}
 \hspace{10mm}
-\subfloat[Remoção de um clipe na imagem original]{\includegraphics[scale=0.45]{photos/c2b}\label{cacheIns}}
-\caption{Comparação entre imagem com um objeto e outra sem esse objeto}
+\subfloat[Remoção de um clipe na imagem original]{\includegraphics[scale=0.45]{photos/c2b}\label{fig2Diff}}
+\caption{Comparação entre imagem com um objeto e outra sem esse objeto
+ }
 \end{center}
 \end{figure}
 
@@ -147,7 +146,7 @@ cacheDados}}
 %m15 fig1
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[scale=0.35]{photos/m15_tricome}\label{cacheDados}
+\includegraphics[scale=0.35]{photos/m15_tricome}\label{fig3}
 \caption{Figura original a ser comparada}
 \end{center}
 \end{figure}
@@ -157,9 +156,9 @@ cacheDados}}
 %m15 fig1
 \begin{figure}[h!]
 \begin{center}
-\subfloat[Sobreposição da palavra CTW na figura original]{\includegraphics[scale=0.22]{photos/m15_tricome_b}\label{cacheDados}}
+\subfloat[Sobreposição da palavra CTW na figura original ]{\includegraphics[scale=0.22]{photos/m15_tricome_b}\label{fig3Diff1}}
 \hspace{5mm}
-\subfloat[Alterção da posição da palavra CTW ]{\includegraphics[scale=0.22]{photos/m15_tricome_c}\label{cacheIns}}
+\subfloat[Alteração da posição da palavra CTW  ]{\includegraphics[scale=0.22]{photos/m15_tricome_c}\label{fig3Diff2}}
 \caption{Comparação entre a foto original e duas fotos compostas pela
   sobreposição de uma palavra à imagem original}
 \end{center}
@@ -170,17 +169,34 @@ cacheDados}}
 %m15 fig1
 \begin{figure}[h!]
 \begin{center}
-\subfloat[Sobreposição da foto de Lena com grau de transparência maior]{\includegraphics[scale=0.22]{photos/m15_tricome_d}\label{
-cacheDados}}
+\subfloat[Sobreposição da foto de Lena com grau de transparência maior
+ ]{\includegraphics[scale=0.22]{photos/m15_tricome_d}\label{fig3Diff3}}
 \hspace{10mm}
-\subfloat[Sobreposição  da foto de Lena com grau de transparência menor]{\includegraphics[scale=0.22]{photos/m15_tricome_e}\label{cacheIns}}
+\subfloat[Sobreposição  da foto de Lena com grau de transparência
+menor ]{\includegraphics[scale=0.22]{photos/m15_tricome_e}\label{fig3Diff4}}
 \caption{Comparação entre a imagem original e duas imagens compostas pela sobreposição
   de uma outra imagem à imagem original}
 \end{center}
 \end{figure}
 
-
-
+\begin{table}
+  \begin{center}
+    \caption{Valor do coeficiente de pearson para várias imagens}
+    \begin{tabular}{|c|c|c|}
+      \hline
+      
+      Figura original & Figura modificada & r\\
+      \hline
+      \ref{fig1} &  \ref{fig1Diff} &  0.887291 \\
+      \ref{fig2} &  \ref{fig2Diff} &  0.907154\\
+      \ref{fig3} &  \ref{fig3Diff1} & 0.994465\\
+      \ref{fig3} & \ref{fig3Diff2} &  0.985331\\
+      \ref{fig3} &  \ref{fig3Diff3} &  0.936883\\
+      \ref{fig3} &  \ref{fig3Diff4} &  0.905874\\
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
 \section{Conclusão}
 
 % ******************************************************
