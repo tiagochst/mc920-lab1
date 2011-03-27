@@ -84,7 +84,7 @@ Ineffectiveness of the Correlation Coefficient for Image Comparisons''.
 \newpage
 
 \section{Introdução}
-O coeficiente de correlação de Pearson é amplamente amplamente
+O coeficiente de correlação de Pearson é amplamente
 utilizado na análise estatística, reconhecimento de padrões e
 processamento de imagens.
 Na área de processamento de imagens ele é utilizado na comparação de
@@ -99,7 +99,7 @@ objetos, e medição disparidade. Para imagens digitais monocromáticas, a corre
 \end{equation}  
 
 Onde $x_i$ é a intensidade dos pixels na imagem 1, $y_i$ é a
-intensidade dos pixels na imagem 2,$\bar{x}$ é a intensidade média da
+intensidade dos pixels na imagem 2, $\bar{x}$ é a intensidade média da
 imagem 1 e $\bar{y}$ é a intensidade média da imagem 2.
 
 O coeficiente tem valor $r=1$ se as duas imagens são absolutamente
@@ -113,7 +113,7 @@ o coeficiente de relação é usado para comparar duas imagens do mesmo
 objeto ou cena durante vários momentos diferentes.
 
 Não obstante à sua utilização, o coeficiente de correlação possui
-diversas limitação, sendo considerado ineficaz em alguns papers.% ~\cite{paper}.
+diversas limitações, sendo considerado ineficaz em alguns papers.% ~\cite{paper}.
  
 Assim, o objetivo deste trabalho é apresentar, através de exemplos, o
 desempenho do coeficiente para comparações de imagens, especialmente
@@ -123,7 +123,7 @@ em aplicações de segurança e, posteriormente, compará-las às consideraçõe
 
 \section{Métodos}
 
-Desenvolveu-se em python um programa de análise de imagens baseada no
+Desenvolveu-se em python um programa de análise de imagens baseado no
 coeficiente de correlação de Pearson. 
 Dado duas imagens para analisar duas imagens, sendo a imagem original dada por $x$  e a
 imagem modificada por $y$ na equação \eqref{eq:r}, retorna-se o valor de $r$.
@@ -183,7 +183,7 @@ enquanto no artigo $r\approx 0.98$.
 \newpage
 \subsection{Sobreposição de imagem}
 Para a imagem original \ref{fig3}, houve uma sobreposição da palavra
-''CWT'' na imagem \ref{fig3Diff1} e na imagem \ref{fig3Diff2},
+''CTW'' na imagem \ref{fig3Diff1} e na imagem \ref{fig3Diff2},
 porém em posição diferente. Obteve-se para a imagem \ref{fig3Diff1}
 um valor de $r\approx 0.99$ se comparado à original e para a imagem \ref{fig3Diff2} 
 um valor de $r\approx 0.98$.
@@ -213,7 +213,7 @@ um valor de $r\approx 0.98$.
 Para a imagem original \ref{fig3}, a imagem de Lena foi sobreposta nas
 imagens \ref{fig3Diff3} e \ref{fig3Diff4}, sendo a primeira mais
 transparente.
-Se comparado à imagem original as imagens \ref{fig3Diff3} e
+Se comparadas à imagem original as imagens \ref{fig3Diff3} e
 \ref{fig3Diff4} apresentam, respectivamente, $r\approx 0.93$ e
 $r\approx 0.90$ . 
 %m15 fig1
@@ -237,7 +237,7 @@ menor ]{\includegraphics[scale=0.18]{photos/m15_tricome_e}\label{fig3Diff4}}
 %-%-%-%-%-%-%-%
 Para a análise da remoção de um objeto da imagem, utilizou-se uma
 sequência de imagens fotografadas a cada 10s durante as quais é retirada
-um livro de um estante de livro.
+um livro de uma estante de livro.
 A figura \ref{fig4Diff1} é muito semelhante à imagem original, nas
 figuras posteriores fez-se o movimento para a retirada do livro da
 imagem, que é concluída na imagem \ref{fig4Diff4}.
@@ -517,7 +517,7 @@ sua transparência é mínima. Mesmo assim a alteração do coeficiente não
 passa de 10\%.
 
 A remoção de um objeto da figura, em nosso caso a remoção de um livro
-na prateleira só teve uma variação próxima a 8\% no momento em que o
+na prateleira, só teve uma variação próxima a 8\% no momento em que o
 braço de uma pessoa apareceu na imagem. Contudo, quando somente o
 livro sumiu o valor de $r$ é próximo a 98\% o que implica na não
 percepção de uma mudança simples.
@@ -527,7 +527,7 @@ apresenta baixa mudança no valor do coeficiente ($r=0,97$), apenas
 mudanças bruscas de mudança no ambiente como a abertura de uma porta
 causaram impacto maior no valor do coeficiente.
 
-Por fim a iluminação do ambiente, provocou mudanças diferentes a cada
+Por fim, a iluminação do ambiente provocou mudanças diferentes a cada
 tempo. Ao ligar a luz do local, as diferenças entre os valores dos
 coeficientes em imagens em sequência chegou a $\Delta r=0.05 $. Já a
 abertura de uma geladeira além de iluminar altera uma grande área da
@@ -587,7 +587,7 @@ Utilizamos o coeficiente de correlação de Pearson
 
 O coeficiente de correlação de Pearson, assim como em outras
 avaliações na literatura, demonstrou-se inefetivo. Portanto, os
-resultados corroboram com o artigo de Eugene K. Yen e
+resultados corroboram o artigo de Eugene K. Yen e
 Roger G. Johnston.
 
 %Necessária?
