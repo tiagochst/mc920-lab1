@@ -60,7 +60,7 @@
     {\textsl{Relatório do primeiro laboratório de MC920}}
     \\\vspace{1cm}
     \begin{tabular}{rl}
-      \textbf{Aluno}:   Carlos~Eduardo~Machado &  
+      \textbf{Aluno}:   Carlos~Eduardo~Rosa~Machado &
       \textbf{RA}:          059582 \\ 
       \textbf{Aluno}:        Tiago~Chedraoui~Silva & 
       \textbf{RA}:        082941 \\
@@ -126,7 +126,7 @@ em aplicações de segurança e, posteriormente, compará-las às consideraçõe
 \section{Métodos}
 
 Desenvolveu-se em python~\cite{python} dois programas de análise de imagens baseado no
-coeficiente de correlação de Pearson. Para o primeiro, dado duas imagens para analisar duas imagens, sendo a imagem original dada por $x$  e a
+coeficiente de correlação de Pearson. Para o primeiro, dadas duas imagens a serem analisadas, sendo a imagem original dada por $x$  e a
 imagem modificada por $y$ na equação \eqref{eq:r}, retorna-se o valor de $r$.
 
 Inicialmente, para a análise do coeficiente, utilizou-se algumas imagens
@@ -134,9 +134,9 @@ previamente analisadas no artigo ´´The Ineffectiveness of the Correlation
 Coefficient for Image Comparisons'' através do qual pretendíamos
 confirmar os resultados obtidos.
 
-Posteriormente, procurou-se alterar outra imagem com a
+Posteriormente, procurou-se alterar uma imagem com a
 sobreposição de outra imagem. Alterou-se algumas características da
-imagem sobreposta, como por exemplo, a posição, a opacidade, para
+figura sobreposta, como, por exemplo, a posição e a opacidade, para
 analisar os efeitos no cálculo do coeficiente produzidos por tais modificações. 
 
 Já o segundo programa simula uma câmera de vigilância, calculando o
@@ -152,11 +152,11 @@ A seguir são descritos todos os testes realizados para a avaliação do coefici
 Para a comparação de imagens através do coeficiente, foram realizados diferentes testes
 . As seções a seguir apresentam as variações dos testes: utilização
 das mesmas figuras do artigo ´´The Ineffectiveness of the Correlation
-Coefficient for Image Comparisons'', sobreposição de imagem , remoção de objetos, detecção
+Coefficient for Image Comparisons'', sobreposição de imagem, remoção de objetos, detecção
 de movimentos e alteração de luminosidade.  
 
 \subsection{Figuras do artigo }
-Utilizando as figuras \ref{fig1} e \ref{fig1Diff} usados no artigo ´´The Ineffectiveness of the Correlation
+Utilizando as figuras \ref{fig1} e \ref{fig1Diff} presentes no artigo ´´The Ineffectiveness of the Correlation
 Coefficient for Image Comparisons'', na qual há uma simples
 sobreposição de uma palavra sobre a imagem, obtemos um valor de r de
 aproximadamente 0.89, enquanto no artigo o valor de r obtido vale
@@ -187,8 +187,8 @@ enquanto no artigo $r\approx 0.98$.
 \end{figure}
 
 Os valores calculados em ambos os casos diferem consideravelmente, pois não utilizou-se
-as imagens originais em nossas avaliações, logo no processo de conversão das imagens do
-artigo houve perda de informação o que pode ter causado tal diferença
+as imagens originais em nossas avaliações. Logo, no processo de conversão das imagens do
+artigo houve perda de informação, o que pode ter causado tal diferença
 nos valores.
 
 
@@ -249,7 +249,7 @@ $r\approx 0.90$ .
 % -%-%-%-%-%-%-%
 Para a análise da remoção de um objeto da imagem, utilizou-se uma
 sequência de imagens fotografadas a cada 10 frames durante as quais é retirada
-um livro de uma estante de livro. Para isso foi utilizado um programa em  python
+um livro de uma estante. Para isso foi utilizado um programa em  python
 desenvolvido.
 A figura \ref{fig4Diff1} é muito semelhante à imagem original, nas
 figuras posteriores fez-se o movimento para a retirada do livro da
@@ -342,8 +342,7 @@ abertura de uma porta.
 
 \begin{figure}[h!]
   \begin{center}
-    \subfloat[Imagem em t=20s
-    ]{\includegraphics[scale=0.22]{photos/porta/g020}\label{fig5Diff3}}
+    \subfloat[Número de frames que se passaram: 20 ]{\includegraphics[scale=0.22]{photos/porta/g020}\label{fig5Diff3}}
     \hspace{10mm}
     \subfloat[Porta aberta: frames ocorridos: 30 ]{\includegraphics[scale=0.22]{photos/porta/g030}\label{fig5Diff4}}
     \caption{Comparação entre a imagem original: frames  20 e 30 }
@@ -354,11 +353,10 @@ abertura de uma porta.
 
 \begin{figure}[h!]
   \begin{center}
-    \subfloat[Imagem em t=40s
-    ]{\includegraphics[scale=0.22]{photos/porta/g040}\label{fig5Diff5}}
+    \subfloat[Número de frames que se passaram: 40 ]{\includegraphics[scale=0.22]{photos/porta/g040}\label{fig5Diff5}}
     \hspace{10mm}
-    \subfloat[Imagem em t=50s ]{\includegraphics[scale=0.22]{photos/porta/g050}\label{fig5Diff6}}
-    \caption{Comparação entre a imagem original: tempos 40s e 50s }
+    \subfloat[Número de frames que se passaram: 50 ]{\includegraphics[scale=0.22]{photos/porta/g050}\label{fig5Diff6}}
+    \caption{Comparação entre a imagem original: frames  40 e 50 }
   \end{center}
 \end{figure}
 
@@ -536,7 +534,7 @@ percepção de uma mudança simples.
 
 Na seção de detecção de movimento, a passagem de uma pessoa também
 apresenta baixa mudança no valor do coeficiente ($r\approx 0.97$), apenas
-mudanças bruscas de mudança no ambiente como a abertura de uma porta
+mudanças bruscas no ambiente como a abertura de uma porta
 causaram impacto maior no valor do coeficiente.
 
 Por fim, a iluminação do ambiente provocou mudanças diferentes a cada
@@ -603,19 +601,19 @@ para a análise do coeficiente.
 Os valores obtidos demonstram que o cálculo do coeficiente é
 extremamente limitado, pois em situações como a passagem de uma pessoa
 por um local ou a retirada de um objeto o valor de r é próximo a 1. O
-que significa uma alta semelhança entre as imagens. O que não é
+que significa uma alta semelhança entre as imagens, o que não é
 verdade. Logo, para sistemas de vigilância o coeficiente de correlação
 de Pearson é uma técnica sem os efeitos esperados.
 
 Além disso, a escolha de um limite no coeficiente pra detectar "situação de
-perigo" é empírico e depende muito da localidade. E mesmo assim, a
-escolha de um valor bom é muito difícil. Por exemplo, nos testes de
-movimentação o valor de r seria $r \approx0.97$, contudo pelos testes
-de iluminação percebe-se o valor de r depende dela. Ou seja, para uma
-situação de dia o valor do limite de $r$ deveria ser um enquanto para
-a mesma situação de noite esse valor possivelmente seria outro.
+perigo" é empírico e depende muito da localidade. E, mesmo assim, a
+escolha de um valor bom é muito difícil. Por exemplo, no teste de
+movimentação de uma pessoa o valor de r crítico seria $r \approx0.97$.
+Contudo, pelos testes de iluminação percebe-se o valor de r depende dela.
+Ou seja, para uma situação de dia o valor do limite de $r$ deveria ser um
+enquanto para a mesma situação de noite esse valor possivelmente seria outro.
  
-Assim, através dos testes realizados, o coeficiente de correlação de Pearson, assim como em outras
+Então, através dos testes realizados, o coeficiente de correlação de Pearson, assim como em outras
 avaliações na literatura, demonstrou-se inefetivo. Portanto, os
 resultados corroboram o artigo de Eugene K. Yen e
 Roger G. Johnston.
