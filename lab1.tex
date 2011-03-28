@@ -29,11 +29,11 @@
 \linespread{1.5}
 \geometry{ 
   a4paper,	% Formato do papel
-  tmargin=30mm,	% Margem superior
-  bmargin=30mm,	% Margem inferior
+  tmargin=25mm,	% Margem superior
+  bmargin=25mm,	% Margem inferior
   lmargin=20mm,	% Margem esquerda
   rmargin=20mm,	% Margem direita
-  footskip=20mm	% Espaço entre o rodapé e o fim do texto
+  footskip=10mm	% Espaço entre o rodapé e o fim do texto
 }
 \include{abaco} 
 \renewcommand{\thetable}{\Roman{table}}
@@ -119,11 +119,13 @@ Assim, o objetivo deste trabalho é apresentar, através de exemplos, o
 desempenho do coeficiente para comparações de imagens, especialmente
 em aplicações de segurança e, posteriormente, compará-las às considerações existentes na literatura.
 
-% O paper é organizado a seção conclui
-
+ O paper é organizado como segue: a seção 2 apresenta os métodos usados para
+ analisar a eficiência do coeficiente de correlação, a seção 3 contém
+ os testes realizados para a obtenção de dados, a seção 4 contém uma
+ análise dos dados coletados, a seção 5 conclui o paper destacando os principais resultados. 
 \section{Métodos}
 
-Desenvolveu-se em python dois programas de análise de imagens baseado no
+Desenvolveu-se em python~\cite{python} dois programas de análise de imagens baseado no
 coeficiente de correlação de Pearson. Para o primeiro, dado duas imagens para analisar duas imagens, sendo a imagem original dada por $x$  e a
 imagem modificada por $y$ na equação \eqref{eq:r}, retorna-se o valor de $r$.
 
@@ -322,7 +324,7 @@ abertura de uma porta.
 \begin{figure}[h!]
   \begin{center}
     \includegraphics[scale=0.35]{photos/porta/gBase} \label{porta}
-    \caption{Remoção de item: figura original a ser comparada}
+    \caption{Detecção de movimento de um objeto da imagem: figura original a ser comparada}
   \end{center}
 \end{figure}
 
@@ -373,12 +375,12 @@ abertura de uma porta.
       \hline
       Figura original & Figura modificada & r\\
       \hline
-      10 &  \ref{fig5Diff1} & 0.996326\\
-      10 &  \ref{fig5Diff2} & 0.995717\\
-      10 &  \ref{fig5Diff3} & 0.952222\\
-      10 &  \ref{fig5Diff4} & 0.862955\\
-      10 &  \ref{fig5Diff5} & 0.798436\\
-      10 &  \ref{fig5Diff6} & 0.818334\\
+      9 &  \ref{fig5Diff1} & 0.996326\\
+      9 &  \ref{fig5Diff2} & 0.995717\\
+      9 &  \ref{fig5Diff3} & 0.952222\\
+      9 &  \ref{fig5Diff4} & 0.862955\\
+     9 &  \ref{fig5Diff5} & 0.798436\\
+      9 &  \ref{fig5Diff6} & 0.818334\\
       \hline
     \end{tabular}
   \end{center}
@@ -396,7 +398,7 @@ passagem de uma pessoa.
 \begin{figure}[h!]
   \begin{center}
     \includegraphics[scale=0.35]{photos/pessoa/gBase}
-    \caption{Remoção de item: figura original a ser comparada}
+    \caption{Detecção de movimento de uma pessoa: figura original a ser comparada}
   \end{center}
   \label{pessoa}
 \end{figure}
@@ -456,7 +458,7 @@ a iluminação do local.
 \begin{figure}[h!]
   \begin{center}
     \includegraphics[scale=0.35]{photos/luzes/gBase}
-    \caption{Remoção de item: figura original a ser comparada}
+    \caption{Alteração na iluminação do ambiente: figura original a ser comparada}
   \end{center}
   \label{luzes}
 \end{figure}
@@ -503,12 +505,12 @@ a iluminação do local.
       \hline
       Figura original & Figura modificada & r\\
       \hline
-      16 &  \ref{fig7Diff1} & 0.996326\\
-      16 &  \ref{fig7Diff2} & 0.995717\\
-      16 &  \ref{fig7Diff3} & 0.952222\\
-      16 &  \ref{fig7Diff4} & 0.862955\\
-      16 &  \ref{fig7Diff5} & 0.798435\\
-      16 &  \ref{fig7Diff6} &  0.818334\\
+      16 &  \ref{fig7Diff1} & 0.997034\\
+      16 &  \ref{fig7Diff2} & 0.942520\\
+      16 &  \ref{fig7Diff3} & 0.940545\\
+      16 &  \ref{fig7Diff4} & 0.933452\\
+      16 &  \ref{fig7Diff5} & 0.975879\\
+      16 &  \ref{fig7Diff6} & 0.976802\\
       \hline
     \end{tabular}
   \end{center}
@@ -517,9 +519,8 @@ a iluminação do local.
 \section{Resultados}
 Agrupando os resultados na tabela \ref{tab:final} percebe-se que o
 coeficiente de correlação de Pearson é realmente ineficaz, já que a
-comparação cujo coeficiente foi o menor é próximo a $r=0.8$ referente
-aos testes de iluminação no qual abriu-se a geladeira, e no teste de
-abertura de uma porta.
+comparação cujo coeficiente foi o menor é próximo a $r\approx 0.8$, referente
+ao teste teste de movimentação no qual existiu a abertura de uma porta.
 
 A sobreposição de imagens pouco modificou o valor do coeficiente,
 sendo que a sobreposição de um texto é literalmente imperceptível
@@ -534,16 +535,18 @@ livro sumiu o valor de $r$ é próximo a 98\% o que implica na não
 percepção de uma mudança simples.
 
 Na seção de detecção de movimento, a passagem de uma pessoa também
-apresenta baixa mudança no valor do coeficiente ($r=0,97$), apenas
+apresenta baixa mudança no valor do coeficiente ($r\approx 0.97$), apenas
 mudanças bruscas de mudança no ambiente como a abertura de uma porta
 causaram impacto maior no valor do coeficiente.
 
 Por fim, a iluminação do ambiente provocou mudanças diferentes a cada
-tempo. Ao ligar a luz do local, as diferenças entre os valores dos
-coeficientes em imagens em sequência chegou a $\Delta r=0.05 $. Já a
-abertura de uma geladeira além de iluminar altera uma grande área da
-figura, assim o valor de r aproxima-se de $r\approx 0.8$
+tempo. Ao ligar a luz do local, os valores dos
+coeficientes em imagens em sequência, se comparadas à imagem original, chegou a $r\approx 0.94 $. Já a
+abertura de uma geladeira apesar de além de iluminar alterar uma grande área da
+figura, o valor de r aproxima-se de $r\approx 0.97$, aparentando
+grande semelhança à imagem original.
 
+%\vspace{-5mm}
 % -%-%-%-%-%-%
 % Tabela com 
 % todos os 
@@ -558,38 +561,39 @@ figura, assim o valor de r aproxima-se de $r\approx 0.8$
       \hline
       \ref{fig1} &  \ref{fig1Diff} &  0.887291 \\
       \ref{fig2} &  \ref{fig2Diff} &  0.907154\\
-      \ref{fig3} &  \ref{fig3Diff1} & 0.994465\\
-      \ref{fig3} & \ref{fig3Diff2} &  0.985331\\
-      \ref{fig3} &  \ref{fig3Diff3} &  0.936883\\
-      \ref{fig3} &  \ref{fig3Diff4} &  0.905874\\
+      3 &  \ref{fig3Diff1} & 0.994465\\
+      3 & \ref{fig3Diff2} &  0.985331\\
+      3 &  \ref{fig3Diff3} &  0.936883\\
+      3 &  \ref{fig3Diff4} &  0.905874\\
       6 &  \ref{fig4Diff1} & 0.999600\\
       6 &  \ref{fig4Diff2} &  0.917454\\
       6 &  \ref{fig4Diff3} &   0.952869\\
       6 &  \ref{fig4Diff4} &   0.983264\\
-      10 &  \ref{fig5Diff1} & 0.996326\\
-      10 &  \ref{fig5Diff2} & 0.995717\\
-      10 &  \ref{fig5Diff3} & 0.952222\\
-      10 &  \ref{fig5Diff4} & 0.862955\\
-      10 &  \ref{fig5Diff5} & 0.798436\\
-      10 &  \ref{fig5Diff6} & 0.818334\\
+      9 &  \ref{fig5Diff1} & 0.996326\\
+      9 &  \ref{fig5Diff2} & 0.995717\\
+      9 &  \ref{fig5Diff3} & 0.952222\\
+      9 &  \ref{fig5Diff4} & 0.862955\\
+      9 &  \ref{fig5Diff5} & 0.798436\\
+      9 &  \ref{fig5Diff6} & 0.818334\\
       13 &  \ref{fig6Diff1} & 0.999314\\
       13 &  \ref{fig6Diff2} & 0.972234\\
       13 &  \ref{fig6Diff3} & 0.971343\\
       13 &  \ref{fig6Diff4} & 0.986933\\
-      16 &  \ref{fig7Diff1} & 0.996326\\
-      16 &  \ref{fig7Diff2} & 0.995717\\
-      16 &  \ref{fig7Diff3} & 0.952222\\
-      16 &  \ref{fig7Diff4} & 0.862955\\
-      16 &  \ref{fig7Diff5} & 0.798435\\
-      16 &  \ref{fig7Diff6} &  0.818334\\
+      16 &  \ref{fig7Diff1} & 0.997034\\
+      16 &  \ref{fig7Diff2} & 0.942520\\
+      16 &  \ref{fig7Diff3} & 0.940545\\
+      16 &  \ref{fig7Diff4} & 0.933452\\
+      16 &  \ref{fig7Diff5} & 0.975879\\
+      16 &  \ref{fig7Diff6} & 0.976802\\
       \hline
     \end{tabular}
   \end{center}\label{tab:final}
 \end{table}
 
 
-
 \newpage
+%\vspace{-5mm}
+
 \section{Conclusão}
 Utilizamos o coeficiente de correlação de Pearson  
 como método de comparação de imagens. Foram feitas diversas
