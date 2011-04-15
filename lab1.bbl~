@@ -1,0 +1,21 @@
+\begin{thebibliography}{10}
+
+\bibitem{DineroIV}
+Jan Edler e Mark D. Hill
+\newblock {\em {Software DineroIV}}.
+\newblock{Disponível em  {\em  http://www.cs.wisc.edu/~markhill/DineroIV/}, [Último acesso: 27/02/2011].}
+
+\bibitem{Ducatte}
+\newblock {Descrição do projeto}. 
+\newblock{Disponível em  {\em  http://www.ic.unicamp.br/~ducatte/mc723/1s2011/exercicio1.htm}, [Último acesso: 27/02/2011].}
+
+\bibitem{Politicas de miss}
+\newblock {Politicas de write-miss.} 
+\newblock {Disponível em {\em people.engr.ncsu.edu/efg/521/f02/common/lectures/notes/lec6.pdf}.}
+
+\bibitem{DineroIV}
+David A. Patterson e John L. Hennessy.
+\newblock {\em {Computer Organization and Design, Fourth Edition: The Hardware/Software Interface}}.
+
+
+\end{thebibliography}
