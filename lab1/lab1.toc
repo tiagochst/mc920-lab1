@@ -1,0 +1,13 @@
+\select@language {brazil}
+\contentsline {section}{\numberline {1}Introdu\IeC {\c c}\IeC {\~a}o}{1}
+\contentsline {section}{\numberline {2}M\IeC {\'e}todos}{1}
+\contentsline {section}{\numberline {3}Compara\IeC {\c c}\IeC {\~a}o de imagens}{2}
+\contentsline {subsection}{\numberline {3.1}Figuras do artigo }{2}
+\contentsline {subsection}{\numberline {3.2}Sobreposi\IeC {\c c}\IeC {\~a}o de imagem}{3}
+\contentsline {subsection}{\numberline {3.3}Remo\IeC {\c c}\IeC {\~a}o de objeto}{4}
+\contentsline {subsection}{\numberline {3.4}Detec\IeC {\c c}\IeC {\~a}o de movimento}{5}
+\contentsline {subsubsection}{\numberline {3.4.1}Abertura de uma porta}{5}
+\contentsline {subsubsection}{\numberline {3.4.2}Passagem de uma pessoa}{6}
+\contentsline {subsection}{\numberline {3.5}Fator Luminosidade}{8}
+\contentsline {section}{\numberline {4}Resultados}{9}
+\contentsline {section}{\numberline {5}Conclus\IeC {\~a}o}{10}
