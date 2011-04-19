@@ -100,7 +100,7 @@ implementaram-na de modo que parefeiçoaram a detecção de cantos.
 \section{Métodos}
 
 %corner = canto O.o
-Desenvolveu-se em python~\cite{python} um programa para aplicar o
+Desenvolveu-se em python~\cite{python} um programa~\cite{code} para aplicar o
 detector de cantos de Moravec.
 
 Dado uma imagem $I$ retorna-se a imagem com os cantos realçados.
@@ -200,24 +200,31 @@ possuir, na maioria das vezes, todos os padrões de legendas. Alguns
 pontos apesar de estarem foram de uma possível legenda, por estarem
 isolados de qualquer outro ponto, podem ser facilmente descartados. 
 Abaixo encontram-se diversos resultados nos quais os pontos de
-contorno podem ser vistos (devido a mudança somente de um pixel, é
-aconselhado que a imagem seja aproximada):
+contorno podem ser vistos. Devido a mudança somente de um pixel, é
+aconselhado que a imagem seja aproximada, as imagens podem ser
+encontradas no repositório do grupo ~\cite{imgRel}.
 
+Para a imagem do filme Harry potter com um limiar, que é dependente de
+nossa implementação(ou seja, dependendo de cada implementação o valor
+de limiar pode ser maior ou menor) próximo a 7500000000, conseguimos
+identificar a maioria das legendas.
 \begin{figure}[h!]
   \begin{center}
-    \subfloat[Original]{\includegraphics[scale=0.15]{img/harrypotter_1}\label{fig2}}
+    \subfloat[Original]{\includegraphics[scale=0.20]{img/harrypotter_1}\label{fig2}}
     \hspace{10mm}
-    \subfloat[Aplicacação de Harris]{\includegraphics[scale=0.15]{img/harrypotter_1_t7500000000_harris.eps}\label{fig2Diff}}
+    \subfloat[Aplicacação de Harris]{\includegraphics[scale=0.20]{img/harrypotter_1_t7500000000_harris.eps}\label{fig2Diff}}
     \caption{Encontrando legendas - pontos de contornos das legendas
       realçados em vermelho}
   \end{center}
 \end{figure}
 
-
+\newpage
 \section{Conclusão}
 Pode-se dizer que o detector de contornos de Harris pode 
 ser usado para a detecção de padrões de legendas em imagens de ritmo visual a
 partir do detector de Harris.
+Dependendo do limiar encontra-se todas as legendas, com um pouco de
+pontos fora das curvas das lgendas, mas que são indentificáveis e descartáveis.
 % Necessária?
 % \section{Agradecimentos}
 

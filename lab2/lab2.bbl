@@ -13,4 +13,12 @@ Chris Harris e Mike Stephens
 \newblock {\em {Imagens para avaliação}}.
 \newblock{Disponível em  {\em http://www.ic.unicamp.br/~neucimar/cursos/MO443/2011-s01/tp2.zip}, [Último acesso: 17/04/2011]}.
 
+\bibitem{code}
+\newblock {\em {Código do projeto}}.
+\newblock{Disponível em  {\em https://github.com/tiagochst/mc920-lab1/tree/master/lab2}}.
+
+\bibitem{imgRel}
+\newblock {\em {Imagens do relatório}}.
+\newblock{Disponível em  {\em https://github.com/tiagochst/mc920-lab1/tree/master/lab2/img}}.
+
 \end{thebibliography}
