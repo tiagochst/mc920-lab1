@@ -93,7 +93,9 @@ legendas em imagens de ritmo visual.
 
 \section{Introdução}
 
-
+Baseado no detector de cantos de Moravec, Chris Harris e
+Mikes Stephens~\cite{paper} desenvolveram melhorias no algoritmo e
+implementaram-na de modo que parefeiçoaram a detecção de cantos.
 
 \section{Métodos}
 
@@ -108,7 +110,7 @@ Para isso aplica-se a fórmula:
 E_{x,y}=\sum_{u,v}w_{u,v}\left | I_{x+u,y+v}-I_{u,v}  \right |^2
 \end{equation}
 
-No entanto, o operador de Moravec sofre de aulgums probemas cujas soluções são apresentados no paper de  Chris Hafris e
+No entanto, o operador de Moravec sofre de aulgums probemas cujas soluções são apresentados no paper de  Chris Harris e
 Mikes Stephens~\cite{paper}. Abaixo estão listadas as que serviram de
 base para uma implementação  em
 nossa pesquisa. 
@@ -186,13 +188,36 @@ Em que se $R>0$, temos uma região de canto, se $R<0$ é uma região e
 borda, se $R \approx 0$ temos uma região plana.
 \end{enumerate}
 
-\section{Comparação de imagens}
+\section{Detecção de contornos em imagens}
 Aplicando as melhorias propostas no paper de Harris e Stephens,
-fez-se uma sequência de experimentos.
+fez-se uma sequência de experimentos imagens de ritmo visual, que
+podem ser encontradas no site
+da disciplina~\cite{imagens}. 
 
-\section{Resultados}
+\subsection{Resultados}
+A partir do detector de Harris, conseguiu-se para um alto limiar,
+possuir, na maioria das vezes, todos os padrões de legendas. Alguns
+pontos apesar de estarem foram de uma possível legenda, por estarem
+isolados de qualquer outro ponto, podem ser facilmente descartados. 
+Abaixo encontram-se diversos resultados nos quais os pontos de
+contorno podem ser vistos (devido a mudança somente de um pixel, é
+aconselhado que a imagem seja aproximada):
+
+\begin{figure}[h!]
+  \begin{center}
+    \subfloat[Original]{\includegraphics[scale=0.15]{img/harrypotter_1}\label{fig2}}
+    \hspace{10mm}
+    \subfloat[Aplicacação de Harris]{\includegraphics[scale=0.15]{img/harrypotter_1_t7500000000_harris.eps}\label{fig2Diff}}
+    \caption{Encontrando legendas - pontos de contornos das legendas
+      realçados em vermelho}
+  \end{center}
+\end{figure}
+
 
 \section{Conclusão}
+Pode-se dizer que o detector de contornos de Harris pode 
+ser usado para a detecção de padrões de legendas em imagens de ritmo visual a
+partir do detector de Harris.
 % Necessária?
 % \section{Agradecimentos}
 

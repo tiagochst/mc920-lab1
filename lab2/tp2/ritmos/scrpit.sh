@@ -1,18 +1,16 @@
-python harris.py -t 100000 cats_1.png  
-python harris.py -t 100000 harrypotter_2.png  
-python harris.py -t 100000 news_2.png
-python harris.py -t 100000 cats_2.png        
-python harris.py -t 100000 hitler_1.png     
-python harris.py -t 100000 terminator_1.png
-python harris.py -t 100000 007_1.png   
-python harris.py -t 100000 commercial_1.png   
-python harris.py -t 100000 hitler_2.png  
-python harris.py -t 100000 terminator_2.png
-python harris.py -t 100000 007_1_t1000.png 
-python harris.py -t 100000 commercial_2.png  
-python harris.py -t 100000 matrix_1.png
-python harris.py -t 100000 007_1_t10.png  
-python harris.py -t 100000  matrix_2.png
-python harris.py -t 100000 007_2.png 
-python harris.py -t 100000 harrypotter_1.png  
-python harris.py -t 100000 news_1.png
+python moravec.py cats_1.png  
+python moravec.py harrypotter_2.png  
+python moravec.py news_2.png
+python moravec.py cats_2.png        
+python moravec.py hitler_1.png     
+python moravec.py terminator_1.png
+python moravec.py 007_1.png   
+python moravec.py commercial_1.png   
+python moravec.py hitler_2.png  
+python moravec.py terminator_2.png
+python moravec.py commercial_2.png  
+python moravec.py matrix_1.png
+python moravec.py  matrix_2.png
+python moravec.py 007_2.png 
+python moravec.py harrypotter_1.png  
+python moravec.py news_1.png
