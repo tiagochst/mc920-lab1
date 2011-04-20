@@ -1,16 +1,4 @@
-python moravec.py cats_1.png  
-python moravec.py harrypotter_2.png  
-python moravec.py news_2.png
-python moravec.py cats_2.png        
-python moravec.py hitler_1.png     
-python moravec.py terminator_1.png
-python moravec.py 007_1.png   
-python moravec.py commercial_1.png   
-python moravec.py hitler_2.png  
-python moravec.py terminator_2.png
-python moravec.py commercial_2.png  
-python moravec.py matrix_1.png
-python moravec.py  matrix_2.png
-python moravec.py 007_2.png 
-python moravec.py harrypotter_1.png  
-python moravec.py news_1.png
+for i in 2500000000 1000000000 500000000 750000000 50000000 25000000000 10000000000 5000000000 7500000000 500000000
+do
+python harris.py -t $i terminator_2.png
+done
