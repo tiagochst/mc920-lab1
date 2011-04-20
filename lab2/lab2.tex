@@ -21,16 +21,16 @@
 \usepackage{amsmath}
 
 
-\usepackage[compact]{titlesec}
-\titlespacing{\section}{0pt}{*0}{*0}
-\titlespacing{\subsection}{0pt}{*0}{*0}
-\titlespacing{\subsubsection}{0pt}{*0}{*0}
+%\usepackage[compact]{titlesec}
+%\titlespacing{\section}{0pt}{*0}{*0}
+%\titlespacing{\subsection}{0pt}{*0}{*0}
+%\titlespacing{\subsubsection}{0pt}{*0}{*0}
 
 \linespread{1.5}
 \geometry{ 
   a4paper,	% Formato do papel
-  tmargin=25mm,	% Margem superior
-  bmargin=25mm,	% Margem inferior
+  tmargin=30mm,	% Margem superior
+  bmargin=30mm,	% Margem inferior
   lmargin=20mm,	% Margem esquerda
   rmargin=20mm,	% Margem direita
   footskip=10mm	% Espaço entre o rodapé e o fim do texto
@@ -97,6 +97,8 @@ Baseado no detector de cantos de Moravec, Chris Harris e
 Mikes Stephens~\cite{paper} desenvolveram melhorias no algoritmo e
 implementaram-na de modo que parefeiçoaram a detecção de cantos.
 
+Nesse laboratório utilizamos tais melhorias para avaliar sua aplicação
+em deteccção de legendas.
 \section{Métodos}
 
 %corner = canto O.o
@@ -248,6 +250,22 @@ Podemos facilmente ver que há uma precisão maior na detecção de legendas nes
 "retângulo de legenda" é bem menor.
 
 \newpage
+
+De maneira aproximada, implementamos um algoritmo que procurava por
+pontos que poderiam formar um retângulo. Como saída, temos a figura original com
+retângulo de contorno de linhas vermelhas. Para a figura
+harrypotter\underline{ }1.png, a saída pode ser vista abaixo.
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[scale=0.20]{img/harrypotter_1_rect_t5700000000}
+    \caption{Detector de Harris}
+  \end{center}
+\end{figure}
+
+Conseguiu-se portanto identificar um grande número de legendas e, a
+partir de um algoritmo mais preciso, poderá se obter a maioria das legendas das imagens.
+
 \section{Conclusão}
 Pode-se dizer que o detector de contornos de Harris pode 
 ser usado para a detecção de padrões de legendas em imagens de ritmo visual a
