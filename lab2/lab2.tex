@@ -110,7 +110,7 @@ Para isso aplica-se a fórmula:
 E_{x,y}=\sum_{u,v}w_{u,v}\left | I_{x+u,y+v}-I_{u,v}  \right |^2
 \end{equation}
 
-No entanto, o operador de Moravec sofre de aulgums probemas cujas soluções são apresentados no paper de  Chris Harris e
+No entanto, o operador de Moravec sofre de alguns problemas cujas soluções são apresentadas no paper de  Chris Harris e
 Mikes Stephens~\cite{paper}. Abaixo estão listadas as que serviram de
 base para uma implementação  em
 nossa pesquisa. 
@@ -153,7 +153,7 @@ C= (XY)\otimes w
 w_{x,y}=\exp-(u^2+ v^2)/2\sigma^2 
 \end{equation}
 
-\item \textbf{O operador responde muito rapidamente à bordas 
+\item \textbf{O operador responde muito rapidamente às bordas
 porque somente o mínimo de E é levado em
 conta} - reformular a medida do canto para fazer uso da variação de E com a direção da mudança.
 
@@ -163,7 +163,7 @@ A mudança, E para o pequeno deslocamento (x, y) pode ser escrita como:
 E_{x,y}=(x,y)M(x,y)^T
 \end{equation}
 
-Emque a Matrix simétrica 2x2 é dada por:
+Em que a Matriz simétrica 2x2 é dada por:
 
 
 \[
@@ -184,28 +184,28 @@ Para realizar um avaliar os cantos, fazemos:
 R = Det - kTr^2
 \end{equation}
 
-Em que se $R>0$, temos uma região de canto, se $R<0$ é uma região e
-borda, se $R \approx 0$ temos uma região plana.
+Em que, se $R>0$, temos uma região de canto, se $R<0$, é uma região de
+borda e, se $R \approx 0$, temos uma região plana.
 \end{enumerate}
 
 \section{Detecção de contornos em imagens}
 Aplicando as melhorias propostas no paper de Harris e Stephens,
-fez-se uma sequência de experimentos imagens de ritmo visual, que
+fez-se uma sequência de experimentos em imagens de ritmo visual, que
 podem ser encontradas no site
 da disciplina~\cite{imagens}. 
 
 \subsection{Resultados}
 A partir do detector de Harris, conseguiu-se para um alto limiar,
 possuir, na maioria das vezes, todos os padrões de legendas. Alguns
-pontos apesar de estarem foram de uma possível legenda, por estarem
+pontos, apesar de estarem fora de uma possível legenda, por estarem
 isolados de qualquer outro ponto, podem ser facilmente descartados. 
 Abaixo encontram-se diversos resultados nos quais os pontos de
 contorno podem ser vistos. Devido a mudança somente de um pixel, é
 aconselhado que a imagem seja aproximada, as imagens podem ser
 encontradas no repositório do grupo ~\cite{imgRel}.
 
-Para a imagem do filme Harry potter com um limiar, que é dependente de
-nossa implementação(ou seja, dependendo de cada implementação o valor
+Para a imagem do filme Harry Potter com um limiar, que é dependente de
+nossa implementação (ou seja, dependendo de cada implementação o valor
 de limiar pode ser maior ou menor) próximo a 7500000000, conseguimos
 identificar a maioria das legendas.
 \begin{figure}[h!]
@@ -223,8 +223,8 @@ identificar a maioria das legendas.
 Pode-se dizer que o detector de contornos de Harris pode 
 ser usado para a detecção de padrões de legendas em imagens de ritmo visual a
 partir do detector de Harris.
-Dependendo do limiar encontra-se todas as legendas, com um pouco de
-pontos fora das curvas das lgendas, mas que são indentificáveis e descartáveis.
+Dependendo do limiar, encontra-se todas as legendas, com um pouco de
+pontos fora das curvas das legendas, mas que são indentificáveis e descartáveis.
 % Necessária?
 % \section{Agradecimentos}
 
