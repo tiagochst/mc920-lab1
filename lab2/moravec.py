@@ -46,8 +46,7 @@ if __name__ == "__main__":
         # Find corners:
         for arg in sys.argv:
             if arg[-4:].lower() in (".jpg", ".png"):
-                image = Image.open(arg)
-                image = image.convert("L")
+                image = Image.open(arg).convert("L")
                 corners = moravec(image, threshold)
                 draw_corners(image, corners)
                 image.save(arg[:-4] + "_t" + str(threshold) + arg[-4:])

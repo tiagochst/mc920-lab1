@@ -1,5 +1,5 @@
-import math, sys, numpy
 from PIL import Image
+import math, numpy, sys
 
 def draw_point(image, x, y, radius = 1):
     """Draw a point centered at (x, y) with specified radius."""
@@ -12,7 +12,7 @@ def draw_corners(image, corners_map):
     for corner in corners_map:
         draw_point(image, corner[0], corner[1])
 
-def harris(image, threshold = 10, sigma = 1.5, k = 0.04):
+def harris(image, threshold = 100000000, sigma = 1.5, k = 0.04):
     """Harris' corner detection for each pixel of the image."""
 
     corners = []
@@ -43,12 +43,13 @@ def harris(image, threshold = 10, sigma = 1.5, k = 0.04):
     C = [[0] * image.size[0] for y in xrange(image.size[1])]
     for y in xrange(1, image.size[1]-1):
         for x in xrange(1, image.size[0]-1):
-            for j in xrange(3):
-                for w in xrange(3):
-                    u, v = w-1, j-1
-                    A[y][x] = A[y][x] + X2[y+v][x+u] * G[j][w]
-                    B[y][x] = B[y][x] + Y2[y+v][x+u] * G[j][w]
-                    C[y][x] = C[y][x] + XY[y+v][x+u] * G[j][w]
+            for i in xrange(3):
+                for j in xrange(3):
+                    u, v = j-1, i-1
+                    A[y][x] = A[y][x] + X2[y + v][x + u] * G[i][j]
+                    B[y][x] = B[y][x] + Y2[y + v][x + u] * G[i][j]
+                    C[y][x] = C[y][x] + XY[y + v][x + u] * G[i][j]
+    del X2, Y2, XY
 
     # Harris Response Function:
     R = [[0] * image.size[0] for y in xrange(image.size[1])]
@@ -58,14 +59,15 @@ def harris(image, threshold = 10, sigma = 1.5, k = 0.04):
             Tr = a + b
             Det = a * b - c * c
             R[y][x] = Det - k * Tr * Tr
+    del A, B, C
 
     # Suppress Non-Maximum Points:
     for y in xrange(1, image.size[1]-1):
         for x in xrange(1, image.size[0]-1):
             maximum = True
-            for j in [-1, 0, 1]:
-                for w in [-1, 0, 1]:
-                    if R[y][x] < R[y+j][x+w]:
+            for dy in (-1, 0, 1):
+                for dx in (-1, 0, 1):
+                    if R[y][x] < R[y + dy][x + dx]:
                         maximum = False 
             if maximum and R[y][x] > threshold:
                 corners.append((x, y))
@@ -80,13 +82,12 @@ if __name__ == "__main__":
         if "-t" in sys.argv:
             threshold = int(sys.argv[sys.argv.index("-t") + 1])
         else:
-            threshold = 10
+            threshold = 100000000
 
         # Find corners:
         for arg in sys.argv:
             if arg[-4:].lower() in (".jpg", ".png"):
-                image = Image.open(arg)
-                image = image.convert("L")
+                image = Image.open(arg).convert("L")
                 corners = harris(image, threshold)
                 draw_corners(image, corners)
                 image.save(arg[:-4] + "_t" + str(threshold) + arg[-4:])
