@@ -1,0 +1,13 @@
+#!/usr/local/bin/python
+import Image
+import ImageDraw
+import ImageFont
+
+fontPath = "/usr/share/fonts/dejavu-lgc/DejaVuLGCSansCondensed-Bold.ttf"
+
+sans16 = ImageFont.truetype ( fontPath, 16 )
+im = Image.new ( "RGB", (200,50), "#ddd" )
+draw = ImageDraw.Draw ( im )
+
+draw.text ( (10,10), "Run awayyyy!", font=sans16, fill="red" )
+im.save ( "runaway.jpg" )
