@@ -19,7 +19,12 @@ draw = ImageDraw.Draw ( im )
 for line in fileinput.input(['linePlan1.txt']):
     line = line.split()     
 
-    draw.line([(float(line[0])-2279,float(line[1])-1428),(float(line[2])-2279,float(line[3])-1428)],fill="white")
+    x0=float(line[0])-2279
+    x1=float(line[2])-2279
+    y0=float(line[1])-1428
+    y1=float(line[3])-1428
+
+    draw.line((x0,y0,x1,y1),fill="white")
 
 #for line in fileinput.input(['linePlan2.txt']):
 #    line = line.split()     
@@ -61,6 +66,13 @@ for line in fileinput.input(['v10Plan1.txt']):
         v10.append(float(line[0])) # pega valocidade
     i=i+1
 
+v90=[]
+i=0
+for line in fileinput.input(['v90Plan1.txt']):
+    if(i%2==0):
+        line = line.split()     
+        v90.append(float(line[0])) # pega valocidade
+    i=i+1
 
 
 # TODO:
@@ -80,10 +92,12 @@ for i in range(len(v0)):
 	v0[i]= int(255*(v0[i]-vmin)/oldrange)
 for i in range(len(v5)):
 	v5[i]= int(255*(v5[i]-vmin)/oldrange)
+for i in range(len(v90)):
+	v90[i]= int(255*(v90[i]-vmin)/oldrange)
 
 
 
-im4 = Image.new ( "L", (3000,3000), 0)
+im4 = Image.new ( "L", (70,70), 0)
 
 #Vou desenhar sobre a imagem
 draw = ImageDraw.Draw ( im4 )
@@ -91,15 +105,13 @@ draw = ImageDraw.Draw ( im4 )
 i=0
 for line in fileinput.input(['linePlan1.txt']):
     line = line.split()
-    x0=float(line[0])
-    x1=float(line[2])
-    y0=float(line[1])
-    y1=float(line[3])
+    x0=float(line[0])-2279
+    x1=float(line[2])-2279
+    y0=float(line[1])-1428
+    y1=float(line[3])-1428
 
-    draw.line((x0,y0,x1,y1),fill=v5[i])
-    print v5[i]
+    draw.line((x0,y0,x1,y1),fill=v90[i])
+    print v90[i]
     i=i+1
 
-im4=im4.crop(im4.getbbox())
-im4.save ( "v5x.jpg" )
-
+im4.save ( "v90x.jpg" )
