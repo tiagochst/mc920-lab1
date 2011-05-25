@@ -3,7 +3,7 @@ from numpy import*
 import sys
 import getopt
 import fileinput
-
+import math
 import Image
 import ImageDraw
 
@@ -97,21 +97,39 @@ for i in range(len(v90)):
 
 
 
-im4 = Image.new ( "L", (70,70), 0)
+im4 = Image.new ( "L", (69,69), 0)
 
 #Vou desenhar sobre a imagem
 draw = ImageDraw.Draw ( im4 )
 
+ax0 = ax1 = ay0 =ay1 = 0
 i=0
 for line in fileinput.input(['linePlan1.txt']):
     line = line.split()
-    x0=float(line[0])-2279
-    x1=float(line[2])-2279
-    y0=float(line[1])-1428
-    y1=float(line[3])-1428
+    x0=int(line[0])-2270
+    x1=int(line[2])-2270
+    y0=int(line[1])-1421
+    y1=int(line[3])-1421
 
-    draw.line((x0,y0,x1,y1),fill=v90[i])
-    print v90[i]
+    if(x0==x1):
+        for aux2 in range (ax0,x0):
+            for aux in range (y1,y0):
+                print("AUX="+str(aux))
+                ant=im4.getpixel((aux2,aux))
+                new=(ant+v90[i])/2
+                im4.putpixel((aux2,aux),int(new))
+        ax0=x0
+    #sobrepondo com a media?
+    if(y1==y0):
+        for aux2 in range (y0,ay0):
+            for aux in range (x1,x0):
+                ant=im4.getpixel((aux,aux2))
+                new=(ant+v90[i])/2
+                im4.putpixel((aux,aux2),int(new))
+        ay0=y0
+
+    #draw.line((x0,y0,x1,y1),fill=255)
+    #print v90[i]
     i=i+1
 
 im4.save ( "v90x.jpg" )
