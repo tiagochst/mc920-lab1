@@ -1,0 +1,24 @@
+\begin{thebibliography}{10}
+
+\bibitem{pca}
+ M.~Turk; A.~Pentland.
+\newblock {EigenFaces for Recognition}.
+\newblock Em {\em www.face-rec.org/algorithms/PCA/jcn.pdf}.
+
+\bibitem{graph}
+Descrição do Graph API do Facebook 
+\newblock Disponível em {\em  developers.facebook.com/docs/reference/api/}.
+
+\bibitem{opencv}
+\newblock {Projeto Opencv}.
+\newblock Descrição em {\em http://opencv.willowgarage.com/wiki/}.
+
+\bibitem{pygame}
+\newblock {Python game development}.
+\newblock Disponível em {\em  www.pygame.org/}.
+
+\bibitem{python}
+\newblock {Python Programming Language – Official Website}.
+\newblock Disponível em {\em  www.python.org/}.
+
+\end{thebibliography}

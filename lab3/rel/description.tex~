@@ -1,0 +1,112 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+
+
+\usepackage{ae,aecompl}
+\usepackage{pslatex}
+\usepackage{epsfig}
+\usepackage{geometry}
+\usepackage{url}
+\usepackage{textcomp}
+\usepackage{ae}
+\usepackage{subfig}
+\usepackage{indentfirst}
+\usepackage{textcomp}
+\usepackage{color}
+\usepackage{setspace}
+\usepackage{verbatim}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+
+% Gráficos
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.3}
+\usepgfplotslibrary{groupplots}
+
+\include{abaco} 
+
+\renewcommand{\labelenumi}{\arabic{enumi}.}
+\renewcommand{\labelenumii}{\arabic{enumi}. \arabic{enumii}}
+
+\onehalfspacing
+\begin{document}
+
+% CAPA
+\thispagestyle{empty}
+
+\begin{minipage}[h]{0.10\linewidth}
+  \ABACO{1}{9}{6}{9}{0.5} 
+\end{minipage}
+\begin{minipage}[h!]{0.7\linewidth}
+  \vspace*{\fill}
+  \centering
+  {\large \textbf{UNIVERSIDADE~ESTADUAL~DE~CAMPINAS}}\\ 
+  {\large INSTITUTO~DE~COMPUTAÇÃO}                   
+  \vspace*{\fill} 
+\end{minipage}
+\\\vspace{0.5cm}
+
+\begin{center} 
+  \rule{11.0cm}{0.4pt}\vspace*{-\baselineskip}\vspace{-2.0pt}
+  \rule{11.0cm}{1.6pt} \vspace*{-\baselineskip}
+  {\Large \textsc{Geração de imagens representativas da condição interna do tronco de árvores}}\vspace{3.2pt}
+  \rule{11.0cm}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt} \rule{11.0cm}{1.6pt}\\
+  {\textsl{Proposta de projeto}}
+  \\\vspace{1cm}
+  \begin{tabular}{ll}
+    Lucas Katayama & \textbf{RA}: 071574\\
+    Zhenlei Ji     & \textbf{RA}: 74433\\
+    Tiago Chedraoui Silva        & \textbf{RA}: 082941\\
+  \end{tabular}
+\end{center}
+\vspace{0.5cm}
+\begin{abstract}
+
+Métodos acústicos são muito utilizados na detecção de defeitos internos nos mais diferentes
+materiais sendo um deles a madeira. No caso do ultrassom, a propagação
+de ondas é afetada pela presença de materiais com diferentes características de impedância
+acústica ou pela presença de vazios, fazendo com que a velocidade de propagação da onda
+sofra variações. Essas variações podem ser utilizadas em correlações com propriedades ou
+condição interna do material. 
+
+O objetivo desse trabalho é a avaliar a geração de imagens representativas da condição interna do tronco de árvores através de dados fornecidos pelo uso do ultrassom como ferramenta para a detecção de árvores com presença de ocos.\end{abstract}
+
+\tableofcontents
+\newpage 
+%\doublespacing
+
+\section{Introdução e Motivação}
+Uma das razões para o baixo rendimento de uma árvore é a presença de ocos.
+Algumas espécies de valor comercial ou estratégico possuem ocos, o que
+inviabiliza economicamente a extração de madeira para o setor madeireiro,
+trazendo prejuízos aos produtores que exploram de forma legal a floresta.
+
+Atualmente, a detecção da existência de ocos na madeira é realilzada através da utilização de ultrassom um tipo métodos acústicos de propagação de ondas que é afetada pela presença de vazios uma vez que a onda tende a percorrer o meio material.  
+Devido ao oco na madeira, a velocidade de propagação da onda
+sofre variações que podem ser utilizadas para a reconstrução da imagem de uma tora.
+
+A partir das velocidades fornecidas pelo ultrassom Uslab com transdutores piezoelétricos de faces planas e de frequências de 45kHz, que foi aplicadas sobre amostras de troncos de Pequiá (Aspidosperma desmanthum) cujos ocos possuiam diversos tamanhos de raio, criou-se uma reconstrução das imagens das toras.
+
+\section{Métodos}
+
+O projeto foi desenvolvido na linguagem Matlab.
+
+\subsection{As projeções}
+
+
+\section{Conclusão}
+
+
+% ******************************************************
+% REFERENCIAS BIBLIOGRÁFICAS
+% ******************************************************
+% \section{Referências}
+\bibliographystyle{plain}
+\begin{small}
+  \bibliography{referencias}
+\end{small}
+
+\end{document}
