@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=latex 2010.5.28)  12 JUN 2011 14:39
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=latex 2010.5.28)  13 JUN 2011 09:26
 entering extended mode
  %&-line parsing enabled.
 **description.tex
@@ -1172,18 +1172,126 @@ File: 1novo.eps Graphic file (type eps)
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[3] (./description.bbl) [4] (./description.aux)
+File: bv0.eps Graphic file (type eps)
+<bv0.eps>
+File: bv5.eps Graphic file (type eps)
+ <bv5.eps>
+File: bv10.eps Graphic file (type eps)
+ <bv10.eps>
+File: bv15.eps Graphic file (type eps)
+ <bv15.eps>
+File: bv20.eps Graphic file (type eps)
+ <bv20.eps>
+File: bv25.eps Graphic file (type eps)
+ <bv25.eps>
+File: bv30.eps Graphic file (type eps)
+ <bv30.eps>
+File: bv35.eps Graphic file (type eps)
+
+<bv35.eps>
+File: bv40.eps Graphic file (type eps)
+ <bv40.eps>
+File: bv45.eps Graphic file (type eps)
+ <bv45.eps>
+File: bv50.eps Graphic file (type eps)
+ <bv50.eps>
+File: bv55.eps Graphic file (type eps)
+ <bv55.eps>
+File: bv60.eps Graphic file (type eps)
+ <bv60.eps>
+File: bv65.eps Graphic file (type eps)
+ <bv65.eps>
+File: bv70.eps Graphic file (type eps)
+
+<bv70.eps>
+File: bv75.eps Graphic file (type eps)
+ <bv75.eps>
+File: bv80.eps Graphic file (type eps)
+ <bv80.eps>
+File: bv85.eps Graphic file (type eps)
+ <bv85.eps>
+File: bv90.eps Graphic file (type eps)
+ <bv90.eps>
+Underfull \hbox (badness 2165) in paragraph at lines 165--202
+[][]  []  []  []  []  []  []
+ []
+
+
+Underfull \hbox (badness 2165) in paragraph at lines 165--202
+[]  []  []  []  []  []  []
+ []
+
+[3]
+File: imagem1.eps Graphic file (type eps)
+ <imagem1.eps>
+File: imagem2.eps Graphic file (type eps)
+ <imagem2.eps>
+File: imagem3.eps Graphic file (type eps)
+ <imagem3.eps>
+File: imagem4.eps Graphic file (type eps)
+ <imagem4.eps>
+File: imagem5.eps Graphic file (type eps)
+ <imagem5.eps>
+File: imagem6.eps Graphic file (type eps)
+
+<imagem6.eps>
+File: imagem7.eps Graphic file (type eps)
+ <imagem7.eps>
+File: imagem8.eps Graphic file (type eps)
+ <imagem8.eps>
+File: imagem9.eps Graphic file (type eps)
+ <imagem9.eps>
+File: imagem10.eps Graphic file (type eps)
+ <imagem10.eps>
+File: imagem11.eps Graphic file (type eps)
+
+<imagem11.eps>
+File: imagem12.eps Graphic file (type eps)
+ <imagem12.eps>
+File: imagem13.eps Graphic file (type eps)
+ <imagem13.eps>
+File: imagem13.eps Graphic file (type eps)
+ <imagem13.eps>
+File: imagem14.eps Graphic file (type eps)
+ <imagem14.eps>
+File: imagem15.eps Graphic file (type eps)
+
+<imagem15.eps>
+File: imagem16.eps Graphic file (type eps)
+ <imagem16.eps>
+File: imagem17.eps Graphic file (type eps)
+ <imagem17.eps>
+File: imagem18.eps Graphic file (type eps)
+ <imagem18.eps>
+Underfull \hbox (badness 2165) in paragraph at lines 210--247
+[][]  []  []  []  []  []  []
+ []
+
+
+Underfull \hbox (badness 2165) in paragraph at lines 210--247
+[]  []  []  []  []  []  []
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: end.eps Graphic file (type eps)
+<end.eps>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[4] (./description.bbl) [5] (./description.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4107 strings out of 256217
- 54915 string characters out of 1917095
+ 4183 strings out of 256217
+ 55652 string characters out of 1917095
  109611 words of memory out of 1500000
- 7292 multiletter control sequences out of 10000+200000
- 34804 words of font info for 45 fonts, out of 1200000 for 2000
+ 7331 multiletter control sequences out of 10000+200000
+ 36448 words of font info for 46 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
- 43i,13n,42p,338b,310s stack positions out of 5000i,500n,6000p,200000b,15000s
+ 43i,13n,42p,338b,368s stack positions out of 5000i,500n,6000p,200000b,15000s
 
-Output written on description.dvi (4 pages, 11944 bytes).
+Output written on description.dvi (5 pages, 16668 bytes).
